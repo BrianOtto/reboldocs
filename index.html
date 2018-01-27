@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Rebol</title>
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/prettify.css">
+    <link rel="stylesheet" href="assets/css/prettify-sunburst.css">
+    <link rel="stylesheet" href="assets/css/rebol.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="assets/img/logo.png" width="60" height="60" class="d-inline-block align-middle" alt="Logo">
+            <span class="h3 logo-title">Rebol<span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><span class="nav-underline">Home <span class="sr-only">(current)</span></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/insert"><span class="nav-underline">Documentation</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="nav-underline">Roadmap</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://forum.rebol.info"><span class="nav-underline">Community</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="nav-underline">About Rebol</span></a>
+                </li>
+                <li class="nav-item pl-lg-2 mt-3 mt-lg-0">
+                    <a class="btn btn-primary" href="http://metaeducation.s3.amazonaws.com/index.html">
+                        <span class="oi oi-data-transfer-download" title="Download" aria-hidden="true"></span>&nbsp;&nbsp;Download
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="jumbotron jumbotron-fluid py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4">Rebol is ...</h1>
+                    
+                    <p class="lead">A lightweight, expressive language in a small package.</p>
+                    
+                    <p>
+                        <ul>
+                            <li>create optimized, domain-specific languages for code and data</li>
+                            <li>create cross-platform applications for Windows, Linux and macOS</li>
+                            <li>supports many different programming styles</li>
+                            <li>no installation required</li>
+                        </ul>
+                    </p>
+                    
+                    <hr class="my-4">
+                    
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a>
+                        
+                        <a class="float-right" href="https://forum.rebol.info" target="_blank" data-toggle="tooltip" data-placement="top" title="Visit Our Forum">
+                            <img class="icon-social" src="assets/img/forum.png">
+                        </a>
+                        <a class="float-right" href="https://www.reddit.com/r/rebol" target="_blank" data-toggle="tooltip" data-placement="top" title="Visit Us on Reddit">
+                            <img class="icon-social" src="assets/img/reddit.png">
+                        </a>
+                        <a class="float-right" href="https://chat.stackoverflow.com/rooms/291/rebol-and-red" target="_blank" data-toggle="tooltip" data-placement="top" title="Visit Us on Stack Overflow">
+                            <img class="icon-social" src="assets/img/stackoverflow.png">
+                        </a>
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div id="carouselIndicators" class="carousel slide" data-ride="false" data-interval="false">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                        </ol>
+                    
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <pre class="prettyprint lang-rebol"><code>records: copy [
+    1 ["name" "John Smith" "age" 35]
+]
+
+insert tail records [
+    2 ["name" "Mary Smith" "age" 25]
+]
+
+; display all the user records
+for-each [id user] records [
+    print [id "-" user/2 "is" user/4]
+]
+</code></pre>
+                            </div>
+                            <div class="carousel-item">
+                                <pre class="prettyprint lang-rebol"><code>makeUUID: function [
+    "Generates a Version 4 UUID"
+][
+    data: collect [
+        loop 16 [keep -1 + random/secure 256]
+    ]
+
+    data/7: data/7 and* 15 or* 64
+    data/9: data/9 and* 63 or* 128
+
+    data: enbase/base to binary! data 16
+</code></pre>
+                            </div>
+                            <div class="carousel-item">
+                                <pre class="prettyprint lang-rebol"><code>parse/case str rules: [
+    collect into points [
+        while [
+            copy point [
+                ["-" | number] to 
+                [" " | "," | "-" | end]
+            ] 
+            
+            any [" " | ","]
+            
+            keep (load point)
+        ]
+    ]
+]</code></pre>
+                            </div>
+                        </div>
+                        
+                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-xl-3 mb-4 mb-xl-0">
+                <div class="row">
+                    <div class="col-3 float-right">
+                        <span class="oi oi-cog icon-example align-top" title="" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-9 float-left">
+                        <span class="h5">Industrial Automation</span><br>
+                        <span class="lead small">
+                            Rebol makes complex tasks simple, and it is used in world class, industrial automation products like 
+                            <a href="https://www.atronixengineering.com/zoe" target="_blank">ZOE</a> by 
+                            <a href="https://www.atronixengineering.com" target="_blank">Atronix</a></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-xl-3 mb-4 mb-xl-0">
+                <div class="row">
+                    <div class="col-3 float-right">
+                        <span class="oi oi-code icon-example align-top" title="" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-9 float-left">
+                        <span class="h5">Scripting</span><br>
+                        
+                        <span class="lead small">
+                            "A more modern language, but with some very similar ideas to Lisp, in that it's all built upon a representation of data which is then executable as programs"
+                        </span>
+                        <footer class="blockquote-footer mt-1">Douglas Crockford in <cite title="Source Title">The JSON Saga</cite></footer>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-xl-3 mb-4 mb-md-0">
+                <div class="row">
+                    <div class="col-3 float-right">
+                        <span class="oi oi-cloud icon-example align-top" title="" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-9 float-left">
+                        <span class="h5">Web Application</span><br>
+                        <span class="lead small">
+                            Rebol can be used to power highly, scalable websites. It has the ability to connect directly to MySQL, and other databases using ODBC.
+                            It has been used to run forums and secure, messaging systems like <a href="http://www.altme.com" target="_blank">AltME</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-xl-3 mb-1">
+                <div class="row">
+                    <div class="col-3 float-right">
+                        <span class="oi oi-loop-square icon-example align-top" title="" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-9 float-left">
+                        <span class="h5">DSL Creation</span><br>
+                        <span class="lead small">
+                            Rebol has a powerful parsing syntax that allows you to create domain-specific languages quickly and easily.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="d-inline"><em>Latest News</em></h4>
+                <a href="#"><img class="float-right" src="assets/img/rss.png"></a>
+                <hr class="mb-4">
+            </div>
+        </div>
+        
+        <div id="carouselNewsControls" class="carousel slide" data-ride="false" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row px-4">
+                        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 equal">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-right card-date"><small>Sunday, Jan 14th, 2018</small></div>
+                                    <h6 class="card-title"><strong>News Article Title</strong></h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 equal">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-right card-date"><small>Saturday, Jan 13th, 2018</small></div>
+                                    <h6 class="card-title"><strong>News Article Title</strong></h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 equal">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-right card-date"><small>Friday, Jan 12th, 2018</small></div>
+                                    <h6 class="card-title"><strong>News Article Title</strong></h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 equal">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-right card-date"><small>Friday, Jan 12th, 2018</small></div>
+                                    <h6 class="card-title"><strong>News Article Title</strong></h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="row px-4">
+                        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 equal">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-right card-date"><small>Thursday, Jan 11th, 2018</small></div>
+                                    <h6 class="card-title"><strong>News Article Title</strong></h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 equal">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-right card-date"><small>Thursday, Jan 11th, 2018</small></div>
+                                    <h6 class="card-title"><strong>News Article Title</strong></h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 equal">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-right card-date"><small>Thursday, Jan 11th, 2018</small></div>
+                                    <h6 class="card-title"><strong>News Article Title</strong></h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0 equal">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-right card-date"><small>Thursday, Jan 11th, 2018</small></div>
+                                    <h6 class="card-title"><strong>News Article Title</strong></h6>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a class="carousel-control-prev" href="#carouselNewsControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            
+            <a class="carousel-control-next" href="#carouselNewsControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        
+        <br>
+        
+        <div class="row">
+            <div class="col-xl-4 equal">
+                <div class="jumbotron bg-light p-4 border border-secondary">
+                    <div class="col-12">
+                        <h3>The Evolution of Rebol 3</h3>
+                        
+                        <p class="lead">Explore the history of Rebol and how we got where we are today lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ...</p>
+                        
+                        <p class="lead">
+                            <a class="btn btn-primary" href="#" role="button">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xl-8 equal">
+                <div class="jumbotron bg-light p-4 border border-secondary">
+                    <div class="col-12">
+                        <h3>Rebol Software Foundation</h3>
+                        
+                        <p class="lead">The mission of the Rebol Software Foundation is to lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ...</p>
+                        
+                        <p class="lead">
+                            <a class="btn btn-primary mb-3 mb-sm-0" href="#" role="button">Become a Member</a>
+                            <a class="btn btn-primary" href="#" role="button">Donate to the RSF</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="jumbotron jumbotron-fluid mb-0 p-4 bg-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-white text-center">
+                    <div class="row no-gutters pb-2">
+                        <div class="col-6"><span class="float-right"><a class="text-white" href="#">Terms of Service</a>&nbsp;&nbsp;[</span></div>
+                        <div class="col-6"><span class="float-left">o]&nbsp;&nbsp;<a class="text-white" href="#">Privacy Policy</a></span></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12">Copyright &copy; 2018 Rebol Software Foundation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/prettify.js"></script>
+    <script src="assets/js/prettify-lang-rebol.js"></script>
+    
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+            PR.prettyPrint();
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+.logo-title {
+    position: relative;
+    top: 0.3rem;
+}
+
+.nav-item.active .nav-underline,
+.nav-item:hover .nav-underline {
+    border-bottom: 3px solid #00607E;
+}
+
+.carousel pre {
+    min-height: 24rem;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.icon-social {
+    padding: 0.5rem;
+}
+
+.icon-example {
+    font-size: 5rem;
+}
+
+.card-date {
+    position: relative;
+    top: -0.7rem;
+}
+
+.equal {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+
+#carouselNewsControls .carousel-control-next,
+#carouselNewsControls .carousel-control-prev {
+    width: 1%;
+}
+
+#carouselNewsControls .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+#carouselNewsControls .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+#carouselNewsControls .card {
+    max-width: 21.1rem; /* needed to constrain the 100% width on the card body */
+}
+
+#carouselNewsControls .card-body {
+    min-height: 10rem;
+    width: 100%; /* needed for IE only */
+}
+
+/* TODO
+
+- add an accordion manual on documentation
+- add a timeline with dots on roadmap
+- community = card for each community / about = lorem ipso
+- link up learn more button
+
+*/
