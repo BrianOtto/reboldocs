@@ -1,0 +1,39 @@
+    <div class="jumbotron jumbotron-fluid mb-0 p-4 bg-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-white text-center">
+                    <div class="row no-gutters pb-2">
+                        <div class="col-6"><span class="float-right"><a class="text-white pr-2" href="#">Terms of Service</a>[</span></div>
+                        <div class="col-6"><span class="float-left">o]<a class="text-white pl-2" href="#">Privacy Policy</a></span></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12">Copyright &copy; 2018 Rebol Software Foundation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/prettify.js"></script>
+    <script src="/assets/js/prettify-lang-rebol.js"></script>
+    
+    <script>
+        $(function () {
+            // initialize the Bootstrap tooltips
+            $('[data-toggle="tooltip"]').tooltip();
+            
+            // update all code blocks to display using pretty print
+            $('pre').addClass('prettyprint lang-rebol');
+            
+            // initialize the code example blocks
+            PR.prettyPrint();
+        })
+    </script>
+
+</body>
+
+</html>

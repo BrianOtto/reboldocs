@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Rebol</title>
+    
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/prettify.css">
+    <link rel="stylesheet" href="/assets/css/prettify-sunburst.css">
+    <link rel="stylesheet" href="/assets/css/rebol.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="/assets/img/logo.png" width="60" height="60" class="d-inline-block align-middle" alt="Logo">
+            <span class="h3 logo-title">Rebol<span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item {% if page.path == 'index.html' %}active{% endif %}">
+                    <a class="nav-link" href="/"><span class="nav-underline">Home <span class="sr-only">(current)</span></span></a>
+                </li>
+                <li class="nav-item {% if page.path contains 'docs' %}active{% endif %}">
+                    <a class="nav-link" href="/docs/3.0/insert"><span class="nav-underline">Documentation</span></a>
+                </li>
+                <li class="nav-item {% if page.path contains 'roadmap' %}active{% endif %}">
+                    <a class="nav-link" href="#"><span class="nav-underline">Roadmap</span></a>
+                </li>
+                <li class="nav-item {% if page.path contains 'community' %}active{% endif %}">
+                    <a class="nav-link" href="https://forum.rebol.info"><span class="nav-underline">Community</span></a>
+                </li>
+                <li class="nav-item {% if page.path contains 'about' %}active{% endif %}">
+                    <a class="nav-link" href="#"><span class="nav-underline">About Rebol</span></a>
+                </li>
+                <li class="nav-item pl-lg-2 mt-3 mt-lg-0">
+                    <a class="btn btn-primary" href="http://metaeducation.s3.amazonaws.com/index.html">
+                        <span class="oi oi-data-transfer-download pr-2" title="Download" aria-hidden="true"></span>Download
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>

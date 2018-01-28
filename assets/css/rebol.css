@@ -1,65 +1,196 @@
+/**** Home ****/
+
+/* 
+ * Centers the title with the logo
+ *
+ * The h3 class appears to be causing issues with the logo's align-middle  
+ *
+ */
 .logo-title {
     position: relative;
     top: 0.3rem;
 }
 
-.nav-item.active .nav-underline,
-.nav-item:hover .nav-underline {
-    border-bottom: 3px solid #00607E;
+/*
+ * Adds an underline to each navbar link you hover over,
+ * as well as any link that is marked as active
+ *
+ * It should use the same color as the logo
+ *
+ */
+.nav-item:hover .nav-underline,
+.nav-item.active .nav-underline {
+    border-bottom: 0.15rem solid #00607E;
 }
 
+/*
+ * Fixes a few display issues with the <pre> tag,
+ * when it is inside a carousel
+ *
+ * Adds a minimum height so that it doesn't jump around when changing slides
+ * Adds some padding so the code doesn't appear to be so close to the edge
+ * All overflow is hidden, in case the code gets too large for smaller screens
+ *
+ */
 .carousel pre {
     min-height: 24rem;
     padding: 1.5rem;
     overflow: hidden;
 }
 
+/*
+ * Adds some padding around each social media icon
+ *
+ */
 .icon-social {
     padding: 0.5rem;
 }
 
+/*
+ * Sets a standard size for the example icons
+ *
+ */
 .icon-example {
     font-size: 5rem;
 }
 
-.card-date {
-    position: relative;
-    top: -0.7rem;
-}
-
+/*
+ * Forces all elements, with the same parent, to have an equal height
+ *
+ */
 .equal {
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
 }
 
-#carouselNewsControls .carousel-control-next,
-#carouselNewsControls .carousel-control-prev {
+/*
+ * Forces a maximum width on the card
+ *
+ * This is needed to constrain the 100% width we added to the card body
+ * I would rather not do this, and allow the card to expand naturally instead, 
+ * but there doesn't seem to be a workaround for the IE issue
+ *
+ */
+#carouselNews .card {
+    max-width: 21.1rem;
+}
+
+/*
+ * Fixes a few display issues with the card body
+ *
+ * Adds a minimum height so that it doesn't jump around when changing slides
+ * Adds a 100% width so that IE displays the cards properly
+ *
+ */
+#carouselNews .card-body {
+    min-height: 10rem;
+    width: 100%;
+}
+
+/*
+ * Moves the date closer to the top of the card
+ *
+ */
+#carouselNews .card-date {
+    position: relative;
+    top: -0.7rem;
+}
+
+/*
+ * Reduces the space needed to display the prev and next arrows
+ *
+ */
+#carouselNews .carousel-control-prev,
+#carouselNews .carousel-control-next {
     width: 1%;
 }
 
-#carouselNewsControls .carousel-control-prev-icon {
+/*
+ * Changes the prev arrow icon to black
+ *
+ */
+#carouselNews .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
-#carouselNewsControls .carousel-control-next-icon {
+/*
+ * Changes the next arrow icon to black
+ *
+ */
+#carouselNews .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-#carouselNewsControls .card {
-    max-width: 21.1rem; /* needed to constrain the 100% width on the card body */
+/**** Docs ****/
+
+/*
+ * The breadcrumb background color
+ *
+ */
+.bg-breadcrumb {
+    background-color: #E9ECEF;
 }
 
-#carouselNewsControls .card-body {
-    min-height: 10rem;
-    width: 100%; /* needed for IE only */
+/*
+ * Forces the accordion navigation to expand to the height of the page
+ *
+ */
+.accordionDocCard {
+    height: 100%;
 }
 
-/* TODO
+/*
+ * Fixes a few display issues with the accordion sections
+ *
+ * Sets the font weight midway between regular and bold
+ * Sets the cursor to a pointer so it appears clickable
+ *
+ */
+#accordionDoc .item h5 {
+    font-weight: 600;
+    cursor: pointer;
+}
 
-- add an accordion manual on documentation
-- add a timeline with dots on roadmap
-- community = card for each community / about = lorem ipso
-- link up learn more button
+/*
+ * Fixes a few display issues with the accordion sub-sections,
+ * when hovering over them with your mouse or when active
+ *
+ * Sets the background color to match the logo
+ * Sets the font weight midway between regular and bold
+ * Sets the cursor to a pointer so it appears clickable
+ * Removes the border on list group items
+ * Sets the text color to white
+ *
+ */
+.accordionDocSub:hover,
+.accordionDocSub.active {
+    background-color: #00607E;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0px;
+    color: #FFFFFF;
+}
 
-*/
+/*
+ * Removes the underline on all dropdown anchors
+ *
+ */
+a.dropdown-toggle {
+    text-decoration: none;
+}
+
+/*
+ * Overrides the Bootstrap blockquote look
+ *
+ */
+blockquote {
+    background: #F8F9FA; 
+    border-left: 10px solid #E9ECEF;
+    margin: 1rem 1.7rem;
+    padding: 0.5rem 1rem;
+}
+
+blockquote p {
+    display: inline;
+}

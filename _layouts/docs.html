@@ -1,0 +1,104 @@
+{% include header.html %}
+
+<nav class="navbar navbar-expand-lg bg-breadcrumb">
+    <ul class="navbar-nav pl-1">
+        <li class="nav-item dropdown">
+            <a class="dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            v3.0
+            </a>
+            
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item active" href="#">v3.0</a>
+            </div>
+            
+            <span class="navbar-text text-muted px-1">/</span>
+            <span class="navbar-text text-muted">Language Reference</span>
+            
+            <span class="navbar-text text-muted px-1">/</span>
+            <span class="navbar-text text-muted">Built-In Functions</span>
+            
+            <span class="navbar-text text-muted px-1">/</span>
+            <span class="navbar-text text-muted">Insert</span>
+        </li>
+    </ul>
+    
+    <div class="navbar-text ml-auto">
+        <!-- add buttons here -->
+    </div>
+</nav>
+
+<div class="container-fluid pl-0 pt-0 pb-0">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card card-body accordionDocCard border-left-0 border-bottom-0 border-top-0 rounded-0">
+                <div id="accordionDoc" data-children=".item">
+                    <div class="item">
+                        <h5 data-toggle="collapse" data-parent="#accordionDoc" href="#accordionDoc1" role="button" aria-expanded="false" aria-controls="accordionDoc1">
+                            Welcome
+                        </h5>
+                        
+                        <div id="accordionDoc1" class="collapse pl-3 show" role="tabpanel">
+                            <div class="mb-2">
+                                <div class="accordionDocSub p-2 {% if page.path contains 'intro.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
+                                    Introduction
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <h5 data-toggle="collapse" data-parent="#accordionDoc" href="#accordionDoc2" role="button" aria-expanded="false" aria-controls="accordionDoc2">
+                            Getting Started with Rebol
+                        </h5>
+                        
+                        <div id="accordionDoc2" class="collapse pl-3 show" role="tabpanel">
+                            <div class="mb-2">
+                                <div class="accordionDocSub p-2 {% if page.path contains 'overview.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
+                                    Overview
+                                </div>
+                                <div class="accordionDocSub p-2 {% if page.path contains 'install.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
+                                    Installing Rebol
+                                </div>
+                                <div class="accordionDocSub p-2 {% if page.path contains 'hello.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
+                                    Hello World
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <h5 data-toggle="collapse" data-parent="#accordionDoc" href="#accordionDoc3" role="button" aria-expanded="false" aria-controls="accordionDoc3">
+                            Language Reference
+                        </h5>
+                        
+                        <div id="accordionDoc3" class="collapse pl-3 show" role="tabpanel">
+                            <div class="mb-2">
+                                <div class="accordionDocSub p-2 {% if page.path contains 'types.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
+                                    Data Types
+                                </div>
+                                <div class="accordionDocSub p-2 {% if page.path contains 'functions.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
+                                    Built-In Functions
+                                </div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item accordionDocSub p-2 ml-4 rounded-0 {% if page.path contains 'insert.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">Insert</li>
+                                    </ul>
+                                <div class="accordionDocSub p-2 {% if page.path contains 'files.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
+                                    File Handling
+                                </div>
+                                <div class="accordionDocSub p-2 {% if page.path contains 'networking.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
+                                    Networking
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-9 pt-3">
+            {{ content }}
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}

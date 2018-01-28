@@ -1,57 +1,5 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <title>Rebol</title>
-    
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="assets/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/prettify.css">
-    <link rel="stylesheet" href="assets/css/prettify-sunburst.css">
-    <link rel="stylesheet" href="assets/css/rebol.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">
-            <img src="assets/img/logo.png" width="60" height="60" class="d-inline-block align-middle" alt="Logo">
-            <span class="h3 logo-title">Rebol<span>
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><span class="nav-underline">Home <span class="sr-only">(current)</span></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/insert"><span class="nav-underline">Documentation</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="nav-underline">Roadmap</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://forum.rebol.info"><span class="nav-underline">Community</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="nav-underline">About Rebol</span></a>
-                </li>
-                <li class="nav-item pl-lg-2 mt-3 mt-lg-0">
-                    <a class="btn btn-primary" href="http://metaeducation.s3.amazonaws.com/index.html">
-                        <span class="oi oi-data-transfer-download" title="Download" aria-hidden="true"></span>&nbsp;&nbsp;Download
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    
+---
+---
     <div class="jumbotron jumbotron-fluid py-5">
         <div class="container">
             <div class="row">
@@ -75,73 +23,37 @@
                         <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a>
                         
                         <a class="float-right" href="https://forum.rebol.info" target="_blank" data-toggle="tooltip" data-placement="top" title="Visit Our Forum">
-                            <img class="icon-social" src="assets/img/forum.png">
+                            <img class="icon-social" src="/assets/img/forum.png">
                         </a>
                         <a class="float-right" href="https://www.reddit.com/r/rebol" target="_blank" data-toggle="tooltip" data-placement="top" title="Visit Us on Reddit">
-                            <img class="icon-social" src="assets/img/reddit.png">
+                            <img class="icon-social" src="/assets/img/reddit.png">
                         </a>
                         <a class="float-right" href="https://chat.stackoverflow.com/rooms/291/rebol-and-red" target="_blank" data-toggle="tooltip" data-placement="top" title="Visit Us on Stack Overflow">
-                            <img class="icon-social" src="assets/img/stackoverflow.png">
+                            <img class="icon-social" src="/assets/img/stackoverflow.png">
                         </a>
                     </p>
                 </div>
                 <div class="col-lg-6">
-                    <div id="carouselIndicators" class="carousel slide" data-ride="false" data-interval="false">
+                    <div id="carouselCode" class="carousel slide" data-ride="false" data-interval="false">
                         <ol class="carousel-indicators">
-                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselCode" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselCode" data-slide-to="1"></li>
+                            <li data-target="#carouselCode" data-slide-to="2"></li>
                         </ol>
                     
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <pre class="prettyprint lang-rebol"><code>records: copy [
-    1 ["name" "John Smith" "age" 35]
-]
-
-insert tail records [
-    2 ["name" "Mary Smith" "age" 25]
-]
-
-; display all the user records
-for-each [id user] records [
-    print [id "-" user/2 "is" user/4]
-]
-</code></pre>
+                                <pre class="prettyprint lang-rebol"><code>{% include example1.reb %}</code></pre>
                             </div>
                             <div class="carousel-item">
-                                <pre class="prettyprint lang-rebol"><code>makeUUID: function [
-    "Generates a Version 4 UUID"
-][
-    data: collect [
-        loop 16 [keep -1 + random/secure 256]
-    ]
-
-    data/7: data/7 and* 15 or* 64
-    data/9: data/9 and* 63 or* 128
-
-    data: enbase/base to binary! data 16
-</code></pre>
+                                <pre class="prettyprint lang-rebol"><code>{% include example2.reb %}</code></pre>
                             </div>
                             <div class="carousel-item">
-                                <pre class="prettyprint lang-rebol"><code>parse/case str rules: [
-    collect into points [
-        while [
-            copy point [
-                ["-" | number] to 
-                [" " | "," | "-" | end]
-            ] 
-            
-            any [" " | ","]
-            
-            keep (load point)
-        ]
-    ]
-]</code></pre>
+                                <pre class="prettyprint lang-rebol"><code>{% include example3.reb %}</code></pre>
                             </div>
                         </div>
                         
-                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#carouselCode" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
@@ -219,12 +131,12 @@ for-each [id user] records [
         <div class="row">
             <div class="col-12">
                 <h4 class="d-inline"><em>Latest News</em></h4>
-                <a href="#"><img class="float-right" src="assets/img/rss.png"></a>
+                <a href="#"><img class="float-right" src="/assets/img/rss.png"></a>
                 <hr class="mb-4">
             </div>
         </div>
         
-        <div id="carouselNewsControls" class="carousel slide" data-ride="false" data-interval="false">
+        <div id="carouselNews" class="carousel slide" data-ride="false" data-interval="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row px-4">
@@ -315,12 +227,12 @@ for-each [id user] records [
                 </div>
             </div>
             
-            <a class="carousel-control-prev" href="#carouselNewsControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselNews" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
             
-            <a class="carousel-control-next" href="#carouselNewsControls" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselNews" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -359,36 +271,3 @@ for-each [id user] records [
             </div>
         </div>
     </div>
-    
-    <div class="jumbotron jumbotron-fluid mb-0 p-4 bg-dark">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-white text-center">
-                    <div class="row no-gutters pb-2">
-                        <div class="col-6"><span class="float-right"><a class="text-white" href="#">Terms of Service</a>&nbsp;&nbsp;[</span></div>
-                        <div class="col-6"><span class="float-left">o]&nbsp;&nbsp;<a class="text-white" href="#">Privacy Policy</a></span></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-12">Copyright &copy; 2018 Rebol Software Foundation</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   
-    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/prettify.js"></script>
-    <script src="assets/js/prettify-lang-rebol.js"></script>
-    
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-            PR.prettyPrint();
-        })
-    </script>
-</body>
-
-</html>
