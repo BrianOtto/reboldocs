@@ -20,7 +20,7 @@
  */
 .nav-item:hover .nav-underline,
 .nav-item.active .nav-underline {
-    border-bottom: 0.15rem solid #00607E;
+    border-bottom: 0.15rem solid #343434;
 }
 
 /*
@@ -165,7 +165,7 @@
  */
 .accordionDocSub:hover,
 .accordionDocSub.active {
-    background-color: #00607E;
+    background-color: #343434;
     font-weight: 600;
     cursor: pointer;
     border: 0px;
