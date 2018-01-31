@@ -31,6 +31,44 @@
             
             // initialize the code example blocks
             PR.prettyPrint();
+            
+            {% if page.path contains 'docs' %}
+            // initialize Disqus comments
+            var disqus_config = function () {
+                this.page.url = 'http://reboldocs.brianotto.com{{ page.url }}';
+                this.page.identifier = '{{ page.url | replace: ".html", "" }}';
+            };
+            
+            var d = document, s = d.createElement('script');
+            s.src = 'https://reboldocs.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            {% endif %}
+            
+            {% if page.path == 'index.html' %}
+            $.ajax('https://api.rss2json.com/v1/api.json?rss_url=' + 'https://forum.rebol.info/c/announcements.rss', {
+               dataType: 'jsonp',
+                success: function(data) {
+                    var count = 0;
+                    
+                    $.each($('.card'), function (key, card) {
+                        if (data.items[count]) {
+                            $(card).find('.card-date').html(data.items[count].pubDate);
+                            
+                            var link = '<a href="' + data.items[count].link + '" target="_blank">';
+                            $(card).find('.card-title').html(link + data.items[count].title + '</a>');
+                            
+                            var content = data.items[count].content;
+                            $(card).find('.card-text').html($(content).closest('blockquote').html());
+                            
+                            count++;
+                        } else {
+                            return false;
+                        }
+                    });
+                }
+            });
+            {% endif %}
         })
     </script>
 

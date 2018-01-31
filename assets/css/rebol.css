@@ -77,14 +77,24 @@
 }
 
 /*
+ * Sets all news links to black
+ *
+ */
+#carouselNews .card-title a {
+    color: #000000;
+}
+
+/*
  * Fixes a few display issues with the card body
  *
- * Adds a minimum height so that it doesn't jump around when changing slides
+ * We hide all content that doesn't fit inside the box
+ * Adds a height so that it doesn't jump around when changing slides
  * Adds a 100% width so that IE displays the cards properly
  *
  */
 #carouselNews .card-body {
-    min-height: 10rem;
+    overflow: hidden;
+    height: 11rem;
     width: 100%;
 }
 
