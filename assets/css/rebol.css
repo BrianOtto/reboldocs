@@ -65,6 +65,18 @@
 }
 
 /*
+ * Changes the carousel indicators to black
+ *
+ */
+#carouselCode .carousel-indicators li {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#carouselCode .carousel-indicators li.active {
+    background-color: #000000;
+}
+
+/*
  * Forces a maximum width on the card
  *
  * This is needed to constrain the 100% width we added to the card body
@@ -128,7 +140,8 @@
  * Changes the next arrow icon to black
  *
  */
-#carouselNews .carousel-control-next-icon {
+#carouselNews .carousel-control-next-icon,
+#carouselCode .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 

@@ -1,0 +1,30 @@
+/* Pretty printing styles. Used with prettify.js. */
+
+pre .str, code .str { color: #000000; } /* string  - black */
+pre .kwd, code .kwd { color: #000000; } /* keyword - black */
+pre .com, code .com { color: #707080; font-style: italic; } /* comment - gray */
+pre .typ, code .typ { color: #000000; } /* type - black */
+pre .lit, code .lit { color: #000000; } /* literal - black */
+pre .pun, code .pun { color: #000000; } /* punctuation - black */
+pre .pln, code .pln { color: #000000; } /* plaintext - black */
+pre .tag, code .tag { color: #000000; } /* html/xml tag - black */
+pre .atn, code .atn { color: #000000; } /* html/xml attribute name  - black */
+pre .atv, code .atv { color: #000000; } /* html/xml attribute value - black */
+pre .dec, code .dec { color: #000000; font-weight: bold; } /* declaration - black and bold */
+
+pre.prettyprint, code.prettyprint {
+	background-color: #FFFEFE; /* white or real close to white */
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+pre.prettyprint {
+	width: 95%;
+	margin: 1em auto;
+	padding: 1em;
+	white-space: pre-wrap;
+}
