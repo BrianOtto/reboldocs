@@ -282,7 +282,7 @@ blockquote p {
 .roadmap > li > .roadmap-panel:before {
   position: absolute;
   top: 26px;
-  right: -14px;
+  right: -15px;
   display: inline-block;
   border-top: 15px solid transparent;
   border-left: 15px solid #ccc;
@@ -293,13 +293,13 @@ blockquote p {
 
 .roadmap > li > .roadmap-panel:after {
   position: absolute;
-  top: 26px;
-  right: -13px;
+  top: 27px;
+  right: -14px;
   display: inline-block;
-  border-top: 15px solid transparent;
+  border-top: 14px solid transparent;
   border-left: 15px solid #fff;
   border-right: 0 solid #fff;
-  border-bottom: 15px solid transparent;
+  border-bottom: 14px solid transparent;
   content: " ";
 }
 
