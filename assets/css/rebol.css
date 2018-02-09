@@ -156,6 +156,14 @@
 }
 
 /*
+ * Sets a standard look for all breadcrumb buttons
+ *
+ */
+.btn-breadcrumb {
+    border: 1px solid #000000;
+}
+
+/*
  * Forces the accordion navigation to expand to the height of the page
  *
  */
@@ -182,8 +190,8 @@
  * Sets the background color to match the logo
  * Sets the font weight midway between regular and bold
  * Sets the cursor to a pointer so it appears clickable
- * Removes the border on list group items
  * Sets the text color to white
+ * Removes the default border
  *
  */
 .accordionDocSub:hover,
@@ -191,8 +199,11 @@
     background-color: #343434;
     font-weight: 600;
     cursor: pointer;
-    border: 0px;
     color: #FFFFFF;
+}
+
+.accordionDocSub {
+    border: 0px;
 }
 
 /*

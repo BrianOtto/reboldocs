@@ -4,7 +4,25 @@ url: http://reboldocs.brianotto.com
 
 kramdown:
   syntax_highlighter_opts:
-     disable: true
+    disable: true
+
+collections:
+  3.0_sections:
+    output: false
+  
+  3.0_chapters:
+    output: true
+    permalink: /docs/3.0/:name
+  
+  3.0_pages:
+    output: true
+    permalink: /docs/3.0/:name
+  
+  archived_sections:
+    output: false
+  
+  versions:
+    output: false
 
 defaults:
   -
@@ -12,8 +30,15 @@ defaults:
       path: ""
     values:
       layout: "default"
+  
   -
     scope:
-      path: "docs"
+      type: "3.0_chapters"
+    values:
+      layout: "docs"
+  
+  -
+    scope:
+      type: "3.0_pages"
     values:
       layout: "docs"

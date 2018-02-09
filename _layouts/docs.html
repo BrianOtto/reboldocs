@@ -1,29 +1,67 @@
 {% include header.html %}
 
-<nav class="navbar navbar-expand-lg bg-breadcrumb">
+{% assign url = page.url | split: "/" %}
+
+{% capture sectionsLabel %}{{ url[2] }}_sections{% endcapture %}
+{% capture chaptersLabel %}{{ url[2] }}_chapters{% endcapture %}
+{% capture pagesLabel %}{{ url[2] }}_pages{% endcapture %}
+
+{% assign sections = site.collections | where: "label" , sectionsLabel | first %}
+{% assign chapters = site.collections | where: "label" , chaptersLabel | first %}
+{% assign pages = site.collections | where: "label" , pagesLabel | first %}
+
+{% for section in sections.docs %}
+    {% assign sectionPath = section.path | split: "/" %}
+    {% assign sectionName = sectionPath[1] | remove: ".md" %}
+    
+    {% if sectionName == page.section %}
+        {% assign bcSection = section.title %}
+    {% endif %}
+{% endfor %}
+
+{% for chapter in chapters.docs %}
+    {% assign chapterPath = chapter.path | split: "/" %}
+    {% assign chapterName = chapterPath[1] | remove: ".md" %}
+    
+    {% if chapterName == page.chapter %}
+        {% assign bcChapter = chapter.title %}
+    {% endif %}
+{% endfor %}
+
+<nav class="navbar navbar-expand-lg bg-breadcrumb py-0">
     <ul class="navbar-nav pl-1">
         <li class="nav-item dropdown">
             <a class="dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            v3.0
+            {% for item in site.versions %}
+            {% if item.version == url[2] %}{{ item.title }}{% endif %}
+            {% endfor %}
             </a>
             
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item active" href="#">v3.0</a>
+                {% for item in site.versions %}
+                <a class="dropdown-item {% if item.version == url[2] %}active{% endif %}" href="/docs/{{ item.version }}/">{{ item.title }}</a>
+                {% endfor %}
             </div>
             
+            {% if bcSection %}
             <span class="navbar-text text-muted px-1">/</span>
-            <span class="navbar-text text-muted">Language Reference</span>
+            <span class="navbar-text text-muted">{{ bcSection }}</span>
+            {% endif %}
+            
+            {% if bcChapter %}
+            <span class="navbar-text text-muted px-1">/</span>
+            <span class="navbar-text text-muted">{{ bcChapter }}</span>
+            {% endif %}
             
             <span class="navbar-text text-muted px-1">/</span>
-            <span class="navbar-text text-muted">Built-In Functions</span>
-            
-            <span class="navbar-text text-muted px-1">/</span>
-            <span class="navbar-text text-muted">Insert</span>
+            <span class="navbar-text text-muted">{{ page.title }}</span>
         </li>
     </ul>
     
     <div class="navbar-text ml-auto">
-        <!-- add buttons here -->
+        <a href="https://github.com/BrianOtto/reboldocs/issues/new?title=Documentation Issue for {{ page.url | replace: "/docs", "" | replace: ".html", "" }}&body=Please read the CONTRIBUTING guidelines before submitting an issue.&labels=docs" target="_blank">
+            <button type="button" class="btn btn-breadcrumb float-right"><img src="/assets/img/github.png"><span class="pl-2 align-middle">Report Page Issue</span></button>
+        </a>
     </div>
 </nav>
 
@@ -31,82 +69,55 @@
     <div class="row">
         <div class="col-lg-3">
             <div class="card card-body accordionDocCard border-left-0 border-bottom-0 border-top-0 rounded-0">
+                {% assign sectionsSorted = sections.docs | sort: "order" %}
+                
                 <div id="accordionDoc" data-children=".item">
+                    {% for section in sectionsSorted %}
                     <div class="item">
-                        <h5 data-toggle="collapse" data-parent="#accordionDoc" href="#accordionDoc1" role="button" aria-expanded="false" aria-controls="accordionDoc1">
-                            Welcome
+                        <h5 data-toggle="collapse" data-parent="#accordionDoc" href="#accordionDoc{{ section.order }}" role="button" aria-expanded="false" aria-controls="accordionDoc{{ section.order }}">
+                            {{ section.title }}
                         </h5>
                         
-                        <div id="accordionDoc1" class="collapse pl-3 show" role="tabpanel">
-                            <div class="mb-2">
-                                <div class="accordionDocSub p-2 {% if page.path contains 'intro.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
-                                    Introduction
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="item">
-                        <h5 data-toggle="collapse" data-parent="#accordionDoc" href="#accordionDoc2" role="button" aria-expanded="false" aria-controls="accordionDoc2">
-                            Getting Started with Rebol
-                        </h5>
+                        {% assign sectionPath = section.path | split: "/" %}
+                        {% assign sectionName = sectionPath[1] | remove: ".md" %}
                         
-                        <div id="accordionDoc2" class="collapse pl-3 show" role="tabpanel">
-                            <div class="mb-2">
-                                <div class="accordionDocSub p-2 {% if page.path contains 'overview.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
-                                    Overview
-                                </div>
-                                <div class="accordionDocSub p-2 {% if page.path contains 'install.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
-                                    Installing Rebol
-                                </div>
-                                <div class="accordionDocSub p-2 {% if page.path contains 'hello.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
-                                    Hello World
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="item">
-                        <h5 data-toggle="collapse" data-parent="#accordionDoc" href="#accordionDoc3" role="button" aria-expanded="false" aria-controls="accordionDoc3">
-                            Language Reference
-                        </h5>
+                        {% assign chaptersInSection = chapters.docs | where: "section" , sectionName %}
+                        {% assign chaptersInSectionSorted = chaptersInSection | sort: "order" %}
                         
-                        <div id="accordionDoc3" class="collapse pl-3 show" role="tabpanel">
+                        <div id="accordionDoc{{ section.order }}" class="collapse pl-3 show" role="tabpanel">
                             <div class="mb-2">
-                                <div class="accordionDocSub p-2 {% if page.path contains 'types.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
-                                    Data Types
+                                {% for chapter in chaptersInSectionSorted %}
+                                <div class="accordionDocSub p-2 {% if chapter.url == page.url %}active{% endif %}" onclick="window.location.href = '{{ chapter.url }}'">
+                                    {{ chapter.title }}
                                 </div>
-                                <div class="accordionDocSub p-2 {% if page.path contains 'functions.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
-                                    Built-In Functions
-                                </div>
+                                
+                                {% assign chapterPath = chapter.path | split: "/" %}
+                                {% assign chapterName = chapterPath[1] | remove: ".md" %}
+                                
+                                {% if chapter.url == page.url or chapterName == page.chapter %}
+                                
+                                    {% assign pagesInChapter = pages.docs | where: "chapter" , chapterName %}
+                                    {% assign pagesInChapterSorted = pagesInChapter | sort: "order" %}
+                                    
                                     <ul class="list-group">
-                                        <li class="list-group-item accordionDocSub p-2 ml-4 rounded-0 {% if page.path contains 'insert.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">Insert</li>
+                                        {% for pics in pagesInChapterSorted %}
+                                        <li class="list-group-item accordionDocSub p-2 ml-4 rounded-0 {% if pics.url == page.url %}active{% endif %}" onclick="window.location.href = '{{ pics.url }}'">{{ pics.title }}</li>
+                                        {% endfor %}
                                     </ul>
-                                <div class="accordionDocSub p-2 {% if page.path contains 'files.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
-                                    File Handling
-                                </div>
-                                <div class="accordionDocSub p-2 {% if page.path contains 'networking.MD' %}active{% endif %}" onclick="window.location.href = '/docs/3.0/insert'">
-                                    Networking
-                                </div>
+                                    
+                                {% endif %}
+                                
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
         
         <div class="col-lg-9 pt-3">
             {{ content }}
-            
-            <br><hr>
-            
-            <div class="row pt-3 pb-4">
-                <div class="col-12">
-                    <a href="https://github.com/BrianOtto/reboldocs/issues/new?title=Documentation Issue for {{ page.url | replace: "/docs", "" | replace: ".html", "" }}&body=Please read the CONTRIBUTING guidelines before submitting an issue.&labels=docs" target="_blank">
-                        <button type="button" class="btn float-right"><img src="/assets/img/github.png"><span class="pl-2 align-middle">Report Issue</span></button>
-                    </a>
-                </div>
-            </div>
             
             <!--
             <div class="row">

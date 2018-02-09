@@ -32,8 +32,8 @@
                 <li class="nav-item {% if page.path == 'index.html' %}active{% endif %}">
                     <a class="nav-link" href="/"><span class="nav-underline">Home <span class="sr-only">(current)</span></span></a>
                 </li>
-                <li class="nav-item {% if page.path contains 'docs' %}active{% endif %}">
-                    <a class="nav-link" href="/docs/3.0/insert"><span class="nav-underline">Documentation</span></a>
+                <li class="nav-item {% if page.url contains 'docs' %}active{% endif %}">
+                    <a class="nav-link" href="/docs/3.0/"><span class="nav-underline">Documentation</span></a>
                 </li>
                 <li class="nav-item {% if page.path contains 'roadmap' %}active{% endif %}">
                     <a class="nav-link" href="/roadmap"><span class="nav-underline">Roadmap</span></a>
