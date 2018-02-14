@@ -32,6 +32,10 @@
             // initialize the code example blocks
             PR.prettyPrint();
             
+            {% if page.url contains '/docs/archived/scripts/' %}
+            $('table').addClass('table table-bordered');
+            {% endif %}
+            
             /*
             {% if page.path contains 'docs' %}
             // initialize Disqus comments

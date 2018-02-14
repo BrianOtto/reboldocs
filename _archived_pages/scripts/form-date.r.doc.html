@@ -1,0 +1,59 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Form Date"
+script-url: "/docs/archived/scripts/form-date.r"
+---
+<div class="toc"><div class="tl2"><a class="fsl" href="#toc-1">1. Introduction to %form-date.r</a></div><div class="tl2"><a class="fsl" href="#toc-2">2. form-date At a Glance</a></div><div class="tl2"><a class="fsl" href="#toc-3">3. Using %form-date.r</a></div><div class="tl2"><a class="fsl" href="#toc-4">4. The format string</a></div><div class="tl2"><a class="fsl" href="#toc-5">5. What you can learn</a></div><div class="tl2"><a class="fsl" href="#toc-6">6. What you can break</a></div><div class="tl2"><a class="fsl" href="#toc-7">7. What's new</a></div><div class="tl3"><a class="fsl" href="#toc-8">7.1. Precision versus Accuracy</a></div><div class="tl2"><a class="fsl" href="#toc-9">8. Credits</a></div></div><a name="toc-1"></a><h2>1. Introduction to %form-date.r</h2>       <p> This library script is for inclusion in other programs and allows  sophisticated date formatting, ala strftime, but not exactly</p><a name="toc-2"></a><h2>2. form-date At a Glance</h2>         <pre class="mdp-example">
+ &gt;&gt; form-date now "%A %e%i %B, %Y at %T"
+ == "Thursday 26th April, 2007 at 00:44:12"
+
+ &gt;&gt; form-date now "%d-%b-%Y/%H:%M:%S%Z"
+ == "26-Apr-2007/00:49:39-04:00"
+
+ &gt;&gt; now
+ == 26-Apr-2007/0:52:13-4:00
+
+ &gt;&gt; form-date now/precise "%c"
+ == "19-Jul-2007/00:01:45.108242-04:00"
+ </pre>     <a name="toc-3"></a><h2>3. Using %form-date.r</h2>      <p> Including this function is simple.  Just <strong>DO</strong> it.</p><pre class="mdp-example">
+ &gt;&gt; do %form-date.r
+ </pre>     <p> or to execute this right out of the rebol.org library</p><pre style="font-size:75%" class="mdp-example">
+ &gt;&gt; do http://www.rebol.org/download-a-script.r?script-name=form-date.r
+ </pre>     You now have the form-date function     <pre class="mdp-example">
+ &gt;&gt; help form-date
+ USAGE:
+     FORM-DATE date format /gmt
+
+ DESCRIPTION:
+      Renders a date to a given format (largely compatible with strftime)
+      FORM-DATE is a function value.
+
+ ARGUMENTS:
+      date -- (Type: date)
+      format -- (Type: any-string)
+
+ REFINEMENTS:
+      /gmt -- Align time with GMT
+ </pre>     <a name="toc-4"></a><h2>4. The format string</h2>       <p> Ordinary characters placed in the format string are inserted into return value without conversion.  Conversion specifications are introduced by a <strong>%</strong> character, and terminated by a conversion  specifier character, and are replaced and inserted into return value as follows:</p><table border="1">  <tr>  <td>  <strong>%a</strong>     </td><td> The abbreviated weekday name according to the current locale.  </td></tr><tr>  <td>  <strong>%A</strong>     </td><td> The full weekday name according to the current locale.  </td></tr><tr>  <td>  <strong>%b</strong>     </td><td> The abbreviated month name according to the current locale.  </td></tr><tr>  <td>  <strong>%B</strong>     </td><td> The full month name according to the current locale.  </td></tr><tr>  <td> <strong>%c</strong>      </td><td> The preferred date and time representation for the current locale.  In this case the <strong>locale</strong> is REBOLand, with a little %b mixed in.  </td></tr><tr>  <td>  <strong>%C</strong>     </td><td> The century number (year/100) as a 2-digit integer.  </td></tr><tr>  <td>  <strong>%d</strong>     </td><td> The day of the month as a decimal number (range 01 to 31).  </td></tr><tr>  <td>  <strong>%D</strong>     </td><td> Equivalent  to %Y/%m/%d.  </td></tr><tr>  <td>  <strong>%e</strong>     </td><td> Like %d, the day of the month as a decimal number, without a leading zero.  </td></tr><tr>  <td>  <strong>%G</strong>    </td><td> The ISO 8601 year with century as a decimal number.  The 4-digit year corresponding to the ISO week number (see  %V).   This  has the  same  format  and  value as %y, except that if the ISO week number belongs to the previous or next year, that year  is  used instead.  </td></tr><tr>  <td>  <strong>%g</strong>     </td><td> Like %G, but without century, i.e., with a 2-digit year (00-99).  </td></tr><tr>  <td>   <strong>%H</strong>   </td><td> The hour as a decimal number using a 24-hour clock (range 00  to 23).  </td></tr><tr>  <td>   <strong>%i</strong>     </td><td> The english suffix for numeric value, st for 01, th for 04.  </td></tr><tr>  <td>   <strong>%I</strong>     </td><td> The  hour as a decimal number using a 12-hour clock (range 01 to 12).  </td></tr><tr>  <td>  <strong>%j</strong>     </td><td> The day of the year as a decimal number (range 001 to 366).  </td></tr><tr>  <td>  <strong>%J</strong>    </td><td>  Like %j, but without leading zeroes.  </td></tr><tr>  <td>  <strong>%m</strong>   </td><td> The month as a decimal number (range 01 to 12).  </td></tr><tr>  <td>  <strong>%M</strong>   </td><td>  The minute as a decimal number (range 00 to 59).  </td></tr><tr>  <td>  <strong>%p</strong>    </td><td> Either "AM" or "PM" according to the given time  value.  Noon is treated as "PM" and midnight as "AM".  </td></tr><tr>  <td> <strong>%s</strong>     </td><td> The second as a decimal number 00-60 with REBOL nanosecond precision, a period followed by 6 digits.  </td></tr><tr>  <td>  <strong>%S</strong>    </td><td> The second as a decimal number (range 00 to 60).  (The range  is up to 60 to allow for occasional leap seconds.)  </td></tr><tr>  <td>  <strong>%t</strong>     </td><td> A tab character.  </td></tr><tr>  <td>  <strong>%T</strong>    </td><td> The time in 24-hour notation (%H:%M:%S).  </td></tr><tr>  <td>  <strong>%u</strong>    </td><td> The  day of the week as a decimal, range 1 to 7, Monday being 1. See also %w.  </td></tr><tr>  <td>  <strong>%U</strong>   </td><td>  The week number of the current year as a decimal  number,  range 00  to  53,  starting  with the first Sunday as the first day of week 01. See also %V and %W.  </td></tr><tr>  <td>  <strong>%V</strong>   </td><td> The ISO 8601:1988 week number of the current year as  a  decimal number,  range 01 to 53, where week 1 is the first week that has at least 4 days in the current year,  and  with  Monday  as  the first day of the week. See also %U and %W.  </td></tr><tr>  <td>  <strong>%w</strong>  </td><td> The  day of the week as a decimal, range 0 to 6, Sunday being 0. See also %u.  </td></tr><tr>  <td>  <strong>%W</strong>  </td><td> The week number of the current year as a decimal  number,  range 00  to  53,  starting  with the first Monday as the first day of week 01.  </td></tr><tr>  <td>  <strong>%y</strong>   </td><td>  The year as a decimal number without a century (range 00 to 99).  </td></tr><tr>  <td>  <strong>%Y</strong>   </td><td> The year as a decimal number including the century.  </td></tr><tr>  <td>  <strong>%Z</strong>   </td><td> The  time-zone  as  hour  offset  from  GMT.  </td></tr><tr>  <td>  <strong>%%</strong>  </td><td> A literal "%" character.  </td></tr></table>    <a name="toc-5"></a><h2>5. What you can learn</h2>        <p> The <strong>interpolate</strong> function, along with <strong>date-codes</strong> is  an excellent example of <strong>parse</strong>.  The dialect created is the two character  format specifiers that produce the date and time pieces.  A strftime dialect.</p><p> REBOL can emulate the functionality of other systems, while still remaining REBOL.</p><p> REBOL code can look world-class elegant when properly formatted and factored.</p><a name="toc-6"></a><h2>6. What you can break</h2>        <p> The date! parameter has to be a date!.  If you use any time related format specifiers, it  has to be a date! that includes time information or returned fields may be incorrect.</p><pre class="mdp-example">
+ &gt;&gt; form-date now/date "%T"
+ == "00:00:00"
+
+ &gt;&gt; form-date now/time "%T"
+  Script Error: form-date expected date argument of type: date
+  Near: form-date now/time "%T"
+
+ &gt;&gt; form-date now "%T"
+ == "02:29:39"
+ </pre>     <a name="toc-7"></a><h2>7. What's new</h2>    <p> With the addition of %c, you have clean, always the same length REBOL time-stamps.</p><pre class="mdp-example">
+ &gt;&gt; 01-Jan-0001/00:00:00.000000-00:00
+ == 1-Jan-0001/0:00
+ &gt;&gt; form-date 01-Jan-0001/00:00:00.000000-00:00 "%c"
+ == "01-Jan-0001/00:00:00.000000+00:00"
+
+ &gt;&gt; form-date now/precise "%c"
+ == "19-Jul-2007/00:42:53.586560-04:00"
+
+ &gt;&gt; form-date now "%c"
+ == "19-Jul-2007/00:43:19.000000-04:00"
+ </pre>     <a name="toc-8"></a><h3>7.1. Precision versus Accuracy</h3>     <p> Please note that <strong>now/precise</strong> while reporting 6 digit <strong>precision</strong> for the sub-seconds, is only as <strong>accurate</strong> as your computer clock will allow.</p><a name="toc-9"></a><h2>8. Credits</h2>     <ul><li> %form-date.r original author: Christopher Ross-Gill  </li><li> Part of QuarterMaster, %qm.r by Christopher Ross-Gill  http://www.ross-gill.com/  </li><li> Usage document by Brian Tiffin, Library Team Apprentice, Last updated: 19-Feb-2009                    </li></ul>

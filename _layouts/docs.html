@@ -87,21 +87,24 @@
                         <div id="accordionDoc{{ section.order }}" class="collapse pl-3 show" role="tabpanel">
                             <div class="mb-2">
                                 {% for chapter in chaptersInSectionSorted %}
-                                <div class="accordionDocSub p-2 {% if chapter.url == page.url %}active{% endif %}" onclick="window.location.href = '{{ chapter.url }}'">
-                                    {{ chapter.title }}
-                                </div>
                                 
                                 {% assign chapterPath = chapter.path | split: "/" %}
                                 {% assign chapterName = chapterPath[1] | remove: ".md" %}
                                 
-                                {% if chapter.url == page.url or chapterName == page.chapter %}
+                                <div class="accordionDocSub p-2 {% if chapter.url == page.url %}active{% endif %}" onclick="window.location.href = '{{ chapter.url }}'">
+                                    {% if page.url contains '/docs/archived/' %}{% if chapter.url == page.url or chapterName == page.chapter %}<img class="pr-2" src="/assets/img/archived-open.png" width="30" height="30">{% endif %}{% endif %}{{ chapter.title }}
+                                </div>
+                                
+                                {% if chapter.url == page.url or chapterName == page.chapter or page.script-url %}
                                 
                                     {% assign pagesInChapter = pages.docs | where: "chapter" , chapterName %}
                                     {% assign pagesInChapterSorted = pagesInChapter | sort: "order" %}
                                     
                                     <ul class="list-group">
                                         {% for pics in pagesInChapterSorted %}
-                                        <li class="list-group-item accordionDocSub p-2 ml-4 rounded-0 {% if pics.url == page.url %}active{% endif %}" onclick="window.location.href = '{{ pics.url }}'">{{ pics.title }}</li>
+                                        {% if pics.script-url == nil %}
+                                        <li class="list-group-item accordionDocSub p-2 ml-4 rounded-0 {% if pics.url == page.url or pics.url == page.script-url %}active{% endif %}" onclick="window.location.href = '{{ pics.url }}.html'">{% if page.url contains '/docs/archived/' %}<img class="pr-2" src="/assets/img/archived-script.png" width="30" height="30">{% endif %}{{ pics.title }}</li>
+                                        {% endif %}
                                         {% endfor %}
                                     </ul>
                                     
@@ -117,7 +120,25 @@
         </div>
         
         <div class="col-lg-9 pt-3">
-            {{ content }}
+            {% if page.url contains '/docs/archived/scripts/' %}
+            <div class="py-2">
+                <div class="btn-group" role="group" aria-label="Script Buttons">
+                    {% if page.url contains '.r.doc' %}
+                    <a type="button" class="btn btn-outline-dark" href="{{ page.url | replace: "/docs/archived/scripts/", "" | replace: ".doc", "" }}">Download Script</a>
+                    <a type="button" class="btn btn-outline-dark" href="{{ page.url | replace: "/docs/archived/scripts/", "" | replace: ".doc", ".html" }}">View Script</a>
+                    {% else %}
+                    <a type="button" class="btn btn-outline-dark" href="{{ page.url | replace: "/docs/archived/scripts/", "" }}">Download Script</a>
+                    <a type="button" class="btn btn-outline-dark" href="{{ page.url | replace: "/docs/archived/scripts/", "" | replace: ".r", ".r.doc.html" }}">View Documentation</a>
+                    {% endif %}
+                </div>
+                
+                <img src="/assets/img/license-cc-by-sa.png" width="88" height="31" class="ml-3">
+            </div>
+            {% endif %}
+            
+            <!-- TODO: add a div wrapper around the script docs so we can target the CSS selectors better -->
+            
+            {% if page.url contains '/docs/archived/scripts/' and page.path contains '.r.html' %}<pre class="prettyprint lang-rebol mx-0"><code>{% endif %}{{ content }}{% if page.url contains '/docs/archived/scripts/' and page.url contains '.r.html' %}</code></pre>{% endif %}
             
             <!--
             <div class="row">

@@ -21,6 +21,14 @@ collections:
   archived_sections:
     output: false
   
+  archived_chapters:
+    output: true
+    permalink: /docs/archived/:name
+  
+  archived_pages:
+    output: true
+    permalink: /docs/archived/:path
+  
   versions:
     output: false
 
@@ -40,5 +48,17 @@ defaults:
   -
     scope:
       type: "3.0_pages"
+    values:
+      layout: "docs"
+  
+  -
+    scope:
+      type: "archived_chapters"
+    values:
+      layout: "docs"
+  
+  -
+    scope:
+      type: "archived_pages"
     values:
       layout: "docs"

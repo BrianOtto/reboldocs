@@ -1,0 +1,36 @@
+body {
+    background: #DDB url('/assets/img/archived-bg.png');
+}
+
+.navbar.bg-light {
+    background-color: transparent !important;
+}
+
+.bg-breadcrumb {
+    background: #FFE url('/assets/img/archived-bg.png');
+}
+
+.card {
+    /* Some alternatives ...
+     * #637964 - Darker Green
+     * rgba(0,0,0,0.1) - Dark Stripe, i.e. scripts.rebol.info
+     */
+    background: #a4b5a3 url('/assets/img/archived-bg.png');
+    border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+.accordionDocSub {
+    background-color: transparent;
+}
+
+.toc {
+    padding: 1rem 0rem;
+}
+
+.toc div {
+    padding: 0.2rem 0rem;
+}
+
+.table-bordered td {
+   border-color: black;
+}

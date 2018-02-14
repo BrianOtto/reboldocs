@@ -13,14 +13,21 @@
     <link rel="stylesheet" href="/assets/css/prettify.css">
     <link rel="stylesheet" href="/assets/css/prettify-rebol.css">
     <link rel="stylesheet" href="/assets/css/rebol.css">
+    {% if page.url contains '/docs/archived/' %}
+    <link rel="stylesheet" href="/assets/css/rebol-archived.css">
+    {% endif %}
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">
+            {% if page.url contains '/docs/archived/' %}
+            <img src="/assets/img/archived-logo.gif" class="d-inline-block align-middle" alt="Logo">
+            {% else %}
             <img src="/assets/img/logo.png" width="60" height="60" class="d-inline-block align-middle" alt="Logo">
             <span class="h3 logo-title">Rebol<span>
+            {% endif %}
         </a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle Navigation">
