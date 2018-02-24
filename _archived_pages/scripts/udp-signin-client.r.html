@@ -1,0 +1,19 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "UDP Signin Client Alarm"
+excerpt: "
+        Together with %udp-signin-server.r this program alerts users on a network
+        that a new user has arrived and logged in.  Client users are only notified
+        when the new user has signed in specificly to see them.  Because this script
+        uses UDP, the client alarm application does not need to connect to any
+        specific IP.  Anyone who runs the client on the local network will automatically
+        receive notifications broadcast over the network.
+        These scripts are simplified parts of a larger sign-in application that is used
+        at my music lesson business.  When students arrive, they sign in at a front
+        desk kiosk machine.  Student attendance information is logged, and the
+        teachers get a voice announcement, in their studio, that their &quot;next student
+        has arrived&quot; (they are only notified when one of their own students has arrived).
+    "
+---
+{% include_relative udp-signin-client.r %}

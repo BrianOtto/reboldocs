@@ -1,0 +1,29 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "File globbing module and dialect"
+license: "none"
+excerpt: "
+        Given a file spec, and optional criteria for date, size,
+        and attributes, the FILE-LIST function returns a block of
+        files that match the spec and criteria.
+
+        It is also a test-bed for how to integrate dialects with
+        one-another. There are sub-dialects for date, size, and
+        attribute tests, and FILE-LIST encapsulates those, along
+        with the LIKE? dialect for pattern matching on file names.
+        There are things I don't like about the approach, but we
+        can learn from it if nothing else (and it does actually
+        work, too :).
+
+        You will see commented bits, possible refinements and
+        various design decisions. Implementation is not the hard
+        part. The hard part is designing something that works
+        well, and intuitively (as in the principle of least
+        surprise).
+
+        There will undoubtedly also be cross-platform issues that
+        need to be addressed.
+	"
+---
+{% include_relative file-list.r %}

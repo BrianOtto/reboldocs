@@ -1,0 +1,27 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "EASY SOCCER"
+license: "none"
+excerpt: "
+		Easy-Soccer is a broker based on CGI which offer an easy way 
+		to write and the deploy distributed Rebol application.
+		
+		Easy-Soccer makes very easy to expose function written in Rebol like services.
+		Thus, you can use these functions as if they were defined locally.
+
+		In a distributed environment Easy-Soccer uses a simple WEB server
+		and CGI to execute Rebol code on the server. HTTP is used for the 
+		transport of the messages like SOAP or X-RPC and so goes easily thru firewalls.
+
+		Easy-Soccer allows not only to publish remote function, but can also provide
+		the client part of the application. So you can have in the same Rebol script
+		the client and the server part of your program.
+		
+		Even more, Easy-Soccer allows you to run your script as a monolithic application
+		without any change and without anything else than your script. In the same spirit,
+		if your script use VID, it can be run within REBOL/View or within the REBOL/Plugin
+		without any change.
+	"
+---
+{% include_relative easy-soccer.r %}

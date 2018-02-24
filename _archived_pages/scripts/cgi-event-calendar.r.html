@@ -1,0 +1,20 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "CGI Event Calendar"
+excerpt: "
+
+        A web site CGI application that displays events in the current
+        calendar month, with links to specified event pages.  Events
+        are stored in the file %bb.db, in the format:
+
+        [&quot;event 1&quot; 18-Apr-2010 http://website.com/event1.html]
+        [&quot;event 2&quot; 20-Apr-2010 http://website.com/event2.html]
+        [&quot;event 3&quot; 20-Apr-2010 http://website.com/event3.html]
+
+        This script uses code derived from Bohdan Lechnowsky's &quot;HTML calendar&quot;. 
+        Taken from the tutorial at http://re-bol.com
+
+    "
+---
+{% include_relative cgi-event-calendar.r %}

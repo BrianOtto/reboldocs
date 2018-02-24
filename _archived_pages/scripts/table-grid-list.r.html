@@ -1,0 +1,79 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Resizeable Table/Grid/Multi-column List Widget Example"
+excerpt: "
+        One of the greatest things about REBOL/View is the built in GUI dialect
+            (&quot;VID&quot;).  It's great for building simple GUI layouts quickly and
+            easily, but the native list widget can be confusing for newcomers.
+        THIS EXAMPLE IS A FULL FEATURED TABLE/GRID/LIST WIDGET FOR VID GUIs.
+            KEYS:  INSERT  DELETE  ARROWS  PAGE UP/DOWN  - +  F1  CTRL+R M S O F U
+            MOUSE: click header to sort, RIGHT-CLICK/DRAG to RESIZE, click to edit
+        Columns can be SORTED and *RESIZED* by clicking the headers.  Data can be
+            EDITED by clicking cells.  Rows can be added, removed, and moved with
+            the INSERT, DELETE, and CTRL+M keys.  Data blocks can be loaded and
+            saved to/from files, in both &quot;flattened&quot; and sub-block formats, using
+            the CTRL+S CTRL+L CTRL+F and CTRL+U keys.  Column format (color, font,
+            etc.) can be easily specified in the column code.  Alternate rows are
+            automatically shaded, and mousing-over a row highlights the current
+            row.  Up and down arrow keys, and page up/down keys can be used to
+            scroll.  The mouse can also be used to scroll (with the scroll bar).
+            Data can be reverted to the last saved change (by clicking the &quot;r&quot;
+            button in the GUI).  The entire grid can be resized to any percentage,
+            with automatic sizing of columns (use the &quot;+&quot; and &quot;-&quot; keys to resize
+            this example).  The entire grid size will also automatically adjust to
+            fit a resized screen.  Press [F1] for help.
+        The compressed code adds all necessary functionality to VID's native list
+            widget - paste it as-is into your script (uncompress to see how it
+            works, or to make changes).
+        Keep the variables and naming coventions as they are in the GUI code (the
+            variables gui, gui-size, t-size, x, y, li, list-size, sl, sl-size,
+            s-pos, and my-supply need to be changed in the compressed code if ever
+            changed in the GUI layout).
+        You can add as many columns as needed to your own GUI grids:
+            Headers must be labeled h1, h2, h3...  Put DIFFERENT TEXT in each.
+            Columns must be labeled col1, col2, col3...  Format each as needed.
+        &quot;header-block&quot; must be edited to contain each of the header labels (i.e.,
+            if your table has headers h1, h2, and h3, the header block should be
+            [h1/text h2/text h3/text]).
+        &quot;x&quot; holds the data displayed in the table - you can save, load, and
+            manipulate it directly, then refresh the display (try the CTRL+S and
+            CTRL+O keys in the GUI example to save and load the grid data).
+        Rows of data are each stored in a SEPARATE block within the &quot;x&quot; block.
+            To &quot;flatten&quot; the block (i.e., to save the grid data in one large
+            block, without sub-blocks), try the CTRL+F keys in this GUI example.
+            To load a flattened block, try the CTRL+U keys.
+        &quot;y&quot; holds a copy of the original data (click the &quot;r&quot; button in the GUI
+            example to reload it and refresh the display to its last saved state).
+        &quot;feel editstyle&quot; is used to make a column EDITABLE.  Click any cell in the
+            GUI example to edit.  These changes are made directly to the &quot;x&quot; block
+            and then the GUI is refreshed.
+        &quot;feel slidestyle&quot; is used to make a column RESIZABLE (RIGHT CLICK/drag the 
+            header to expand or contract any column width).  This function also
+            contains the &quot;sort-column&quot; function, which allows the user to sort
+            columns of data by clicking the header.
+        &quot;sort-column&quot; sorts the selected column number.  Each call to this
+            function alternates between ascending and descending sort order.
+        &quot;key-scroll&quot; enables keyboard scrolling (use the up/down cursor keys, and
+            page up/down keys in this GUI example).
+        &quot;add-line&quot; adds a row of data to the grid, at a chosen index (use the
+            [INSERT] key in this GUI example).
+        &quot;remove-line&quot; removes a selected row of data (use the [DELETE] key in this
+            GUI example).
+        &quot;move-line&quot; moves a row of data from one selected index to another (use
+            the CTRL+M keys in this GUI example to move rows).
+        &quot;resize-fit&quot; resizes the table to fit the GUI, with equally sized columns.
+            The compressed code contains an insert-event-function which 
+            automatically resizes the table to fit the GUI window, when resized.
+            Press CTRL+R in this GUI example to execute the function manually.
+        &quot;resize-grid&quot; resizes the table a given percentage (press the &quot;+&quot; and &quot;-&quot;
+            keys in this GUI example to see it work).
+        Notice that the majority of user-editable code in the GUI consists of
+            headers, column names and formatting, and &quot;key&quot; widgets to run the
+            desired functions.  In this example GUI, the user presses keystroke
+            combinations to activate the desired features, but those functions
+            could also be added to the action blocks of buttons, and/or executed
+            by any other typical trigger.
+    "
+---
+{% include_relative table-grid-list.r %}

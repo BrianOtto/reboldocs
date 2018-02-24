@@ -1,0 +1,23 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "A keyword based search engine for the Rebtutorial articles index page"
+license: "none"
+excerpt: "Was tired looking up visually the index page for any article containing a specific keyword.
+			  
+			  For now the script loads and parses the original articles' index page duirectly from the Rebtutorial.com web site, 
+			  splitting URL links apart from their descriptions, and while counting them it appends them to a block 
+			  that can be searched by keyword. 
+			  
+			  Every occurence is itself appended into a list that displays itself when the verbose mode is set to 'true. 
+			  
+			  Furthermore, for the time being, you'll have to manually delete the many comments included here
+			  for documentation and exploration of another auto-doc selective help system, inspired by the comments section of
+			  the dynamic dictionary (%word-browser.r script) found in the RebWorld - Tools folder.
+			  
+			  See the EXAMPLES section for more info and the look I originally plan to have.
+			  Every suggestion is welcome and appreciated. Eventually I would prefer to develop a RSpec like product
+			  for keeping executables specs in sync with Unit tests (%rUnit.r) of the xUnit family.
+			 "
+---
+{% include_relative rebtut-indexer.r %}

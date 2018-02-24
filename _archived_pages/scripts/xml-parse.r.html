@@ -1,0 +1,132 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "A more XML 1.0 compliant set of XML parsing tools."
+excerpt: "
+        REBOL's built-in parse-xml function lacks a number of 
+        XML 1.0 compliant features, including:
+        - support for CDATA sections
+        - support for XML Namespaces
+        - exposure of the internal DTD subset
+
+        The intent of this script is to create an XML parser
+        that can operate either via an event/callback mechanism,
+        or produce a block structure similar to REBOL's built-in
+        parse-xml function.
+
+        This XML parser is designed to call-back into a 
+        'parse-handler' object that has been designed to be similar
+        to the well-known XML parsing interface known as &quot;SAX&quot;
+        (Simple API for XML) by David Megginson.
+
+        For more information on SAX, see David's website at:
+        http://www.megginson.com/SAX/index.html
+
+        Several parse-handlers are included here:
+        - the base 'class' xml-parse-handler that contains only empty 
+          callback stubs
+        - the debugging aid echo-handler that prints out the callback
+          event stream
+        - the block-handler that produces a superset of the block structure
+          created by REBOL's built-in parse-xml function
+
+        Alternatively, you may choose to build your own parse
+        event handler rather than use the functionality provided
+        here.
+
+        A new function is defined &quot;parse-xml+&quot; that represents
+        the enhanced counterpart to the built-in REBOL parse-xml.
+
+        Additional features provided by this parser:
+        1.  Document prolog information
+
+            The built-in REBOL parse-xml function returns a set of
+            nested blocks where the first two items in the outermost
+            block are the words document and none, such as:
+            [document none [...]]
+
+            The parse-xml+ function provided herein can produce a
+            set of nested blocks where the second item of the outermost
+            block is used to represent prolog and document type
+            information.
+
+            An example of this block is:
+
+            [   version &quot;1.0&quot; encoding &quot;utf-8&quot; standalone &quot;yes&quot;
+                doctype none pubid none sysid none subset none
+            ]
+
+        2. CDATA Section Processing
+
+           XML provides for enclosing data content within CDATA
+           sections for the convenience of avoiding the need to
+           escape certain XML sensitive characters in the data
+           such as the ampersand (&) and less-than-sign (<).
+
+           An example of a CDATA section:
+
+           <foo>abc <![CDATA[Jack & Jill]]> xyz</foo>
+
+           A compliant XML parser would report that the content 
+           of element 'foo' is &quot;abc Jack & Jill xyz&quot;. 
+
+           CDATA sections are also useful when putting text samples
+           of XML within the content of an XML document.
+
+           <example><![CDATA[<foo>bar</foo>]]></example>
+
+           Here the value of element 'example' is the text
+           &quot;<foo>bar</foo>&quot;
+
+        3. Comments
+
+           This parser provides the opportunity to process 
+           comments embedded within the XML.
+
+        4. Processing Instructions
+
+           This parser provides the opportunity to process 
+           processing instructions embedded within the XML.
+
+           <foo><?my-app this is a processing instruction?></foo>
+
+        5. Automatic Character Entity Expansion
+
+           In XML document it is common to encounter &quot;character
+           entities&quot; within the content of the document.  These
+           entities are the means for escaping sensitive XML 
+           characters so that the character will be processed as
+           data rather than markup.  The most common characters
+           that are subjected to this treatment are the 
+           ampersand (&) and less-than-sign (<).
+
+           This parser recognizes these common entities and
+           automatically converts them to their character 
+           equivalents.
+
+           For example:
+
+           <foo>Jack &amp; Jill</foo>
+
+           This parser will automatically replace the &amp;
+           character entity reference to the ampersand (&)
+           character; hence, the value of element 'foo' is
+           &quot;Jack & Jill&quot;.
+
+           Character entities can also be encoded with their
+           Unicode numeric equivalent rather than the symbolic
+           name in either decimal or hex form, such as:
+
+           <foo>Ampersands: &amp;&#38;&#x26;</foo>
+
+           The value of element 'foo' is &quot;Ampersands: &&&&quot;.
+
+        6. Namespace Processing
+
+           Namespace processing is vital to handling real-world
+           XML.
+
+           @@TBD: say more here
+    "
+---
+{% include_relative xml-parse.r %}

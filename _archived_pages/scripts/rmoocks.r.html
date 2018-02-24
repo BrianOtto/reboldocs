@@ -1,0 +1,24 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "rmoocks"
+license: "none"
+excerpt: "Emulates, with a few lines of Rebol code, the &quot;CommServer&quot; flash XML socket 
+server from Moock and Clayton.(see www.moock.org for the flash client.)
+The server sends a simple xml doc like <NUMCLIENTS>numclients</NUMCLIENTS>
+as soon as someone enters or leaves the server.
+By updating and comparing the old and updated value of numclients, The Flash
+client knows if someone has entered or left the room. Plus: if a numclient is
+received as the text field is empty, the client displays its welcome message.
+Simple and efficient :)
+This script adds a user limit feature.
+I am currently discovering Rebol and try to use it with Flash.
+This is my first script, be indulgent :)
+My current project is a flash multiuser socket server handling
+advanced options (rooms and user variables storage).
+****************************************************************************************
+Special thanks to Olivier Auverlot, check his website: http://rebolfrance.multimania.com
+****************************************************************************************
+"
+---
+{% include_relative rmoocks.r %}

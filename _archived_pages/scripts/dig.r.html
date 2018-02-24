@@ -1,0 +1,43 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "DNS protocol"
+license: "none"
+excerpt: " REBOL DIG : Implementation of DNS protocol (RFC 1035)  
+          	  
+		  URL is dig://name-server/TYPE/name
+		   
+		  ans: read dig://ns.thomething.com/SOA/thomething.com
+		  ans: read dig://172.30.1.1/PTR/194.252.19.3
+		  ans: read dig::/172.30.1.1/A/noway.myhome.com
+		  
+		  you can see a list of available TYPEs in cmd-list in beginning of code
+		  
+		  use ans/to-str to obtain readable answer:
+		  
+		  >> do %dig.r                                        
+		  Script: &quot;DNS protocol&quot; (19-Feb-2005)
+		  dig protocol loaded
+		  >> ans: read dig://ns.libertysurf.net/SOA/tiscali.fr
+		  connecting to: ns.libertysurf.net
+		  >> print ans/to-str                                 
+		  ;; REQUEST: SOA(6) for tiscali.fr
+		  ;; id: 7724 AA: 1 RD: 1 RA: 0 ANSWER(s): 1 AUTHORITY(s): 2 ADDITIONAL(s): 2
+
+		  ;; ANSWER(s):
+	          tiscali.fr. 1800    SOA ns.libertysurf.net.  admin-dns.libertysurf.net.  2005021701  1800  900  1209600  1800
+
+		  ;; AUTHORITY(s)
+		  tiscali.fr. 604800  NS  ns.libertysurf.net.
+                  tiscali.fr. 604800  NS  ns2.libertysurf.net.
+
+		  ;; ADDITIONAL(s)
+                  ns.libertysurf.net. 1800    A   213.36.80.2
+                  ns2.libertysurf.net.    1800    A   213.36.80.4
+
+                   >> 
+		  
+		  If you want to extract yourself information look at the structure of objects question,answer,resource and (xxx)-data in code 
+    "
+---
+{% include_relative dig.r %}

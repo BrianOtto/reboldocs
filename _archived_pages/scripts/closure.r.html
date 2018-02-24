@@ -1,0 +1,19 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Closure"
+excerpt: "
+        CLOSURE is suggested instead of FUNC when you need functions
+		exhibiting async behaviour,	e.g. for:
+		- View
+		- Async Ports
+		- Higher Order Functions
+		
+		Closures differ from &quot;normal&quot; Rebol functions by using a fresh
+		context every time they are called.
+		
+		Rule of thumb: if your function is returning a new function, block, or
+		a local word, you will be safe if it is a closure.
+    "
+---
+{% include_relative closure.r %}

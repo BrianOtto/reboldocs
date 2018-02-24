@@ -1,0 +1,49 @@
+/* copied from http://scripts.rebol.info/scripts/form-date */
+
+code a:active, code a:hover {color: #c00;}
+code var {font-weight: normal; font-style: normal;}
+code .dt-function,
+code .dt-native {color: #900;}
+code .dt-datatype {color: #736;}
+code .dt-bitset {color: #072;}
+code .dt-binary {color: #041;}
+code .dt-char {color: #072;}
+code .dt-date {color: #079;}
+code .dt-decimal {color: #079;}
+code .dt-email {color: #072;}
+code .dt-error {color: #fff; background: #900;}
+code .dt-file {color: #072;}
+code .dt-integer {color: #079;}
+code .dt-issue {color: #072;}
+code .dt-lit-word {color: #606;}
+code .dt-money {color: #079;}
+code .dt-pair {color: #079;}
+code .dt-string {color: #072;}
+code .dt-bitset {color: #072;}
+code .dt-tag {color: #09A;}
+code .dt-time {color: #079;}
+code .dt-tuple {color: #079;}
+code .dt-url, code a.dt-url {color: #072;}
+code .dt-refinement {color: #972;}
+code .dt-set-word,
+code .dt-rebol {color: #004; font-weight: bold;}
+code .dt-set-path {color: #004; font-weight: bold;}
+code .dt-cmt {color: #999; font-style: italic;}
+code .dt-preamble {color: #999; font-style: italic;}
+
+pre.prettyprint, code.prettyprint {
+	background: #FFF url('/assets/img/archived-bg.png');
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+pre.prettyprint {
+	width: 95%;
+	margin: 1em auto;
+	padding: 1em;
+	white-space: pre-wrap;
+}

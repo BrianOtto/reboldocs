@@ -1,0 +1,18 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "REBOL Heavy Script Cleaner (Pretty Printer)"
+license: "none"
+excerpt: "
+        Based on Carls %clean-script.r
+        Cleans (pretty prints) REBOL scripts by parsing the REBOL code
+        and supplying standard indentation and spacing.
+      Breaks now every bracket/paren it finds (thus &quot;heavy&quot;).
+        If you have a really messed up script, 
+        like %ascii-chart.r from the library, 
+        you have a chance to make it readable. 
+        Don't use with already readable Scripts..
+        -Volker
+    "
+---
+{% include_relative clean-script-heavy.r %}

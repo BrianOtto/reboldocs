@@ -1,0 +1,19 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "TextUI - Textual User Interface"
+excerpt: "
+        Open source REBOL is currently being ported to platforms without
+        GUI support.  This script is a simple replacement for GUIs that collect
+        text input from fields and drop down lists.  Just specify a block of
+        labels, and a block of default values for each field ('answers).  If the
+        the 'answers block contains a nested block, the values in that
+        block with be used as items in a list selector (so that users don't
+        need to type a long response and/or can select from a pre-defined
+        list of options - similar to a GUI text-list or drop-down selector).
+
+        This works in both R2 and R3, with only minimal console support
+        (currently operational on Android).
+    "
+---
+{% include_relative textui.r %}

@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="/assets/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/prettify.css">
+    {% if page.url contains '/docs/archived/' %}
+    <link rel="stylesheet" href="/assets/css/prettify-rebol-archived.css">
+    {% else %}
     <link rel="stylesheet" href="/assets/css/prettify-rebol.css">
+    {% endif %}
     <link rel="stylesheet" href="/assets/css/rebol.css">
     {% if page.url contains '/docs/archived/' %}
     <link rel="stylesheet" href="/assets/css/rebol-archived.css">

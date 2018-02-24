@@ -2,6 +2,8 @@ repository: BrianOtto/brianotto.github.io
 
 url: http://reboldocs.brianotto.com
 
+encoding: utf-8
+
 kramdown:
   syntax_highlighter_opts:
     disable: true

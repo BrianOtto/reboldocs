@@ -1,0 +1,18 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "RebCall system"
+license: "none"
+excerpt: " Call DLL functions efficiently with REBOL/View without the need for REBOL/View/Pro or REBOL/Command.
+		This script only works on Windows with a patched REBOL interpreter.
+		Details available at http://mortimer.devcave.net/projects/rebcall
+		
+		Actually only the types that fits in 32 bits are supported
+		for the parameters. Thus decimal! values are not.
+		
+		It could also work on future REBOL/Core, here are the requierements:
+			- get-env has to be defined (and get process environment variables)
+			- struct! datatype must be available.
+	"
+---
+{% include_relative rebcall.r %}

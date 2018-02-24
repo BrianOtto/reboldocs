@@ -1,0 +1,44 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "SNMP v1 protocol"
+license: "none"
+excerpt: " Implementation of SNMP v1 scheme (RFC 1155,1156,1157) , no TRAP.
+          URL is snmp://[community@]<host adr>/CMD/<id values>
+          default community is public
+          Where CMD is get getnext or set
+          id values is a string like that: &quot;1.3.6.1.2.1.1.1.0 1.3.6.1.2.1.1.5.0&quot;
+         
+          Return an object:
+
+              make object! [
+                  version: 0
+                  community: &quot;public&quot;
+                  request-id: 1122
+                  error-status: 0
+                  error-message: &quot;NoError&quot;
+                  error-index: 0
+                  values: [[#1.3.6.1.2.1.1.1.0 {Hardware: x86 Family 5 Model 8 Stepping 12 AT/AT COMP
+                  ATIBLE - Software: Windows 2000 Version 5.0 (Build 2195 Uniprocessor Free)}] [#1.3.6.1.
+                  2.1.1.5.0 &quot;BOGOMILE&quot;]]
+              ]
+
+           samples:
+           p: open snmp://public@127.0.0.1/GET/
+           insert p &quot;1.3.6.1.2.1.1.5.0&quot;
+           rep1: copy p
+           close p
+           rep2: read join snmp://public@127.0.0.1/GET/  &quot;1.3.6.1.2.1.1.1.0 1.3.6.1.2.1.1.5.0&quot;;
+           rep5: read join snmp://public@127.0.0.1/GETnext/1.3.6.1.2.1.4.21.1.1.0
+
+	   adr: 172.16.1.1
+	   while [ adr <> 172.16.1.254 ] [
+	        error? try [
+		  rep: read to-url rejoin [ &quot;snmp://&quot; adr &quot;/GET/1.3.6.1.2.1.1.1.0 1.3.6.1.2.1.1.5.0&quot; ]
+		  print [ &quot;At &quot; adr &quot; find: &quot;  second first rep/values &quot;  :  &quot; second second rep/values ]
+	        ]
+	        adr: adr + 0.0.0.1
+           ]
+        "
+---
+{% include_relative snmp.r %}

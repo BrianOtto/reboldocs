@@ -1,0 +1,12 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Write a log file"
+license: "none"
+excerpt: "Logs Rebol values to a file named %Log.txt. I use 'Log to help debug CGI scripts.
+Use 'Log like:
+Log/clear now ; Start a new log file.
+; What's the CGI query string contents?
+Log Rebol/options/cgi/query-string"
+---
+{% include_relative oneliner-log.r %}

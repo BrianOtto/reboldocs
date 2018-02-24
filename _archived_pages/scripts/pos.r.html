@@ -1,0 +1,25 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "POINT OF SALE SYSTEM"
+excerpt: "
+        This is a point of sale system (sales checkout, receipt printer, and data
+        storage system) written using RebGUI.  It may help provide some basic
+        insight into the workings of RebGUI.  Actually, the majority of this code
+        manages user workflow - saving/retrieving receipts.  The RebGUI parts are
+        simple and short.
+
+        Note that the username and password info in the posp.db file should be
+        created and read using a separate method, and encrypted.  The example
+        posp.db file is created here as a demonstration.  Note also that the first
+        field in the layout is designed to accept input from a keyboard wedge bar
+        code scanner, with data in the format: item (space) booth (space) price
+        (inserted [ENTER] key character).  Using this format, and the &quot;focus&quot; code
+        which is executed after each scan entry, the user can continually scan
+        multiple items into each ticket, without using the keyboard.  Manual
+        keyboard-only entry is also supported.
+
+        Taken from the tutorial at http:/re-bol.com
+    "
+---
+{% include_relative pos.r %}

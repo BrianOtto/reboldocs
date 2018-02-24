@@ -1,0 +1,61 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "SQL PROTOCOL"
+license: "none"
+excerpt: "
+		SQL-PROTOCOL is a SQL Relationnal Database Management System (RDBMS) entirely written in REBOL 
+		with JOIN and SORT capability. This allow you having an easy to use lightweight database engine embeded
+		in your REBOL application.
+		
+		Today, sql-protocol execute only these kind of query :
+		* SELECT ... FROM ... WHERE ... ORDER BY ...
+		* INSERT ... INTO ... VALUES ...
+		* UPDATE ... SET ... WHERE ...
+		* DELETE FROM ... WHERE ...
+		* CREATE TABLE ...
+		* DROP TABLE ...
+		
+		Query can be submited either as a standard SQL query string or as a SQL like query dialect block.
+		* by using SQL query string you will have a better compatibility with other database system like MySQL, Oracle or DB2.
+		* by using SQL query dialect you will get advantage of REBOL scripting facility.
+		
+		This quick example illustrates how to load the protocol, open a database, 
+		select some rows from two tables, probe the result and close the database.
+		
+		Using standard SQL query string :
+		
+		    do %sql-protocol.r
+		    db: open sql:my-db
+		    insert db {
+		        SELECT * FROM a, b
+		        WHERE a.c2 = b.c1 AND a.c1 = 1
+		        ORDER BY 1, 2 DESC
+		    }
+		    foreach item copy db [probe item]
+		    close db
+		
+		The same using the SQL dialect :
+		
+		    do %sql-protocol.r
+		    db: open sql:my-db
+		    insert db [
+		        SELECT * FROM a b
+		        WHERE a.c2 = b.c1 AND a.c1 = 1
+		        ORDER BY 1 [2 DESC]
+		    ]
+		    foreach item copy db [probe item]
+		    close db
+		
+		Moreover, sql-protocol provide a basic compabibility with the ODBC text driver {Microsoft text driver (*.csv,*.txt)} 
+		in order to provide a quick and simple way to share data between REBOL application and any ODBC application,
+		for example, MS Excel to produce table or chart,or MS Word to produce letters or mailing.
+		
+		sql-protocol provide also a set of file protocol which can be used directly in your script :
+		DATA:  - text file containing a REBOL block for each row
+		HEAP:  - same as DATA but for transient table (in memory table)
+		CSV:   - delimited file by any caracter except doublequote (&quot;), newline (
+) or linefeed ().
+    "
+---
+{% include_relative sql-protocol.r %}

@@ -1,0 +1,24 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Get Patent"
+license: "none"
+excerpt: "Downloads various types of patents from the l2.espacenet.com server.
+Normally espace forces you to download the patents one page at a time.
+This script gets all of the pages for you automatically.
+Shows various progress bars and time estimates.
+There may be patents that this does not get because I can not
+find any documentation on how l2.espacenet encodes its URL's.
+If you know how to encode a specific URL please let me know
+so that I can add support for it. -  bpaddock@csonline.net
+
+The program is also example of how to use Rebol's:
+    request-download
+    choice[]
+    ProgressBars/Time Estimates
+    How to change face text on button press, and how
+    to dynamically enable/disable a button.
+    Real world application of Events.
+"
+---
+{% include_relative patent.r %}

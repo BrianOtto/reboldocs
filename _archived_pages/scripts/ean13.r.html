@@ -1,0 +1,20 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "EAN-13 Barcode Image Generator"
+license: "none"
+excerpt: "
+        Generates EAN-13 barcode images as image! which can be used for
+        print out and later read with a barcode reader.
+        It's means to the the basic first version of a fuil barcode generator script
+        for support of mulitple barcode types.
+
+        Usage: gencode &quot;1234567890123&quot;
+        Any 13-digit can be used, but must be valid 13-digit barcode
+        to be read by a barcode reader.
+        See '? gencode' for help on options
+
+        Example: gencode &quot;7501031311309&quot;
+    "
+---
+{% include_relative ean13.r %}

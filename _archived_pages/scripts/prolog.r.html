@@ -1,0 +1,42 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Prolog Like Inference Engine"
+license: "none"
+excerpt: "
+        This is an inference engine wich process prolog like clause
+        The engine can process prolog like clauses of the form :
+            man [jean]
+            woman [mary]
+            human [X] [man [X]]
+            human [X] [woman [X]]
+
+        CUT (!) and FAIL are implemanted (it's the only hardcoded predicates in the engine)
+
+        The engine execute Rebol code placed in parenthesis (like in the parse function).
+        Parenthesis can be place either in the body of the clause
+        or as a parameter of predicates :
+            add [X Y (X + Y)]
+            human [X] [man [X] (print [X &quot;is a human&quot;])]
+
+        The engine consider that all words with a value that are not functions as vars.
+        Other words are taken as symbol.
+
+        Local vars are all words that start with an uppercase char or with underscore (_)
+        The anonyme var is implemented and can be either _ or none
+
+        A var is free if it's value is none, a var is bound if it's value is not none
+
+        The engine offers a set of pre-defined clauses (internal clausses)
+        like NOT, EQUAL?, IF, BOUND, FREE and REPEAT.
+
+        To add or remove clauses from a knowlege base use ASSERT and RETRACT function
+
+        To execute a goal, use GOAL or FOR-WHICH functions
+
+        To bench the engine use BENCH-GOAL function.
+
+        The call-trace and unify-trace words allows to enable or disable the trace capability of the engine.
+    "
+---
+{% include_relative prolog.r %}

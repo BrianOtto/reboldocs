@@ -1,0 +1,13 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "cookie-jar reader/writer"
+license: "none"
+excerpt: "
+        Parses cookie-jar files and returns a block of records.
+        Records are blocks of either strings or name-value pairs.
+        if /keep-comments is used there will be two fields for
+        each record: 'content and 'comment; comment may be none.
+    "
+---
+{% include_relative cookie-jar-lib.r %}

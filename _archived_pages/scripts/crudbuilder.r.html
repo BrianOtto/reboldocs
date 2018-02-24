@@ -1,0 +1,19 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "CRUD Builder"
+excerpt: "
+        A simple GUI application builder.  For each unique application, just copy this
+        script to a new file name, edit the 'filename used to store record data (replace 
+        %mycruddatafile with a filename specific to each new app), and then edit the
+        'widgets block.  Any field or area widgets assigned a label will automatically be
+        included in the app (i.e., item, info, sku, and notes, in the demo app below).
+        You can include any number of such widgets, and the app will automatically allow
+        you to create, save, edit, retrieve and delete records containing all of the labeled
+        field data.  Select existing records using the automatically updated text-list widget.
+        Create, save, and delete records using the buttons, and/or by using shortcut
+        keystrokes (save: CTRL+S, new record: CTRL-N, delete currently selected
+        record: DELETE key).
+    "
+---
+{% include_relative crudbuilder.r %}

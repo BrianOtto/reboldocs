@@ -1,0 +1,18 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Insert - Most Recently Used list idiom"
+license: "none"
+excerpt: "
+        Insert an item in a series, where the series is treated
+        as an MRU list. That is, the newest item is at the head,
+        there are no duplicates (inserting a value removes the
+        previous instance of that value if it exists), and the
+        series may be limited to a specific size. If a new item
+        causes the series to grow beyond that size, the last item
+        is removed.
+
+        It is often used with menus of recently accessed files.
+    "
+---
+{% include_relative insert-mru.r %}

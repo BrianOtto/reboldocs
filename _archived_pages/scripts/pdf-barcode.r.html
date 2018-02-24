@@ -1,0 +1,16 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "PDF Bar Code Generator"
+excerpt: "
+        Takes a given string and XxY coordinate (in millimeters), and outputs
+        a PDF file containing a printable bar code at the given position.  The bar
+        code algorithm is derived directly from Bohdan Lechnowsky's &quot;code39.r&quot;, 
+        and the PDF is generated using Gabriele Santilli's &quot;pdf-maker.r&quot;.  This
+        script was created because images output by the original code39.r
+        script would become blurred when inserted and resized by pdf-maker.r.
+        Here, the bars are rendered as lines, directly in pdf-maker dialect.  The
+        images generated are crisp and easily scannable. 
+    "
+---
+{% include_relative pdf-barcode.r %}

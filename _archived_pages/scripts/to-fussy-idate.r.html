@@ -1,0 +1,16 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "to-fussy-idate"
+license: "none"
+excerpt: "A function which converts a Rebol date! to a string formatted 
+              according to a strict interpretation of the RFC 822 standard.
+              
+              If the time is not provided, a default of 00:00 is used.
+              If the seconds are not set, 00 is used.
+              (NB The zone defaults to 00:00 in a Rebol date)
+                           
+              Based on the original to-idate of Rebol/core and comments on the
+              Rebol mailing list."
+---
+{% include_relative to-fussy-idate.r %}

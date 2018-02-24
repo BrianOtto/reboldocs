@@ -1,0 +1,26 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "EASY SERVICE"
+license: "none"
+excerpt: "
+        Easy-Service is a broker based on REBOL/Service which offer an easy way 
+        to write and the deploy distributed Rebol application.
+        Easy-Service makes very easy to expose function written in Rebol like REBOL/Services.
+        Thus, you can use these functions as if they were defined locally.
+
+        In a distributed environment easy-service uses a simple WEB server
+        and CGI to execute Rebol code on the server. HTTP and REBOL/Services are used for the 
+        transport layer.
+
+        Easy-service allows not only to publish remote function, but can also provide
+        the client part of the application. So you can have in the same Rebol script
+        the client and the server part of your program.
+        
+        Even more, easy-service allows you to run your script as a monolithic application
+        without any change and without anything else than your script. In the same spirit,
+        if your script use VID, it can be run within REBOL/View or within the REBOL/Plugin
+        without any change.
+    "
+---
+{% include_relative easy-service.r %}

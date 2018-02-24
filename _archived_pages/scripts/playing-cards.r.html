@@ -1,0 +1,19 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Playing Card Images"
+excerpt: "
+        A data block of playing card images.  Use the following code to view:
+
+        do %playing-cards.r
+        gui: [size 670x510 backdrop 0.150.0 across ]
+        foreach [card label num color pos] cards [
+        append gui compose [
+            at (pos) image load to-binary decompress (card)
+        ]
+        view layout gui
+
+        Taken from the tutorial at http://re-bol.com
+    "
+---
+{% include_relative playing-cards.r %}

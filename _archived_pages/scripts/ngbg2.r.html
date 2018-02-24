@@ -1,0 +1,49 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "National Geographic Image of the Day Downloader"
+license: "none"
+excerpt: " Downloads all the &quot;Picture Of The Day&quot; images (current and past)
+	from the National Geographic website and saves it to a location of your choice.
+	Revisions: 
+	Version 1.2.5 Checked to see if the large wallpaper exists and if not to use the smaller
+		wall paper image.		
+	Version 1.2.4 Changed from &quot;Viewing&quot; the POTD to &quot;Browsing&quot; the POTD which then
+		allows the user to go back to see other pictures that may have been missed.
+	Version 1.2.3 Added displays for current file name download. Added slider to set
+		the number of downloads for this run.
+	Version 1.2.2 Added a stop (abort) button.
+	Version 1.2.1 I didn't like the silent operation so I added a progress meter.
+	Version 1.2.0 Modified to download all past POD (pictures of the day) images starting
+	from 2001-04-21 to current date. Also modified to store each POD with a unique
+	filename and also download the description of the picture and save it as an HTML file
+	with links to Next and Previous pictures. Updated the help files and their display
+	using the Request/OK function instead of the dump to console.  Added a directory
+	requester for storing of files so users don't have to modify the code.  Added a 
+	preferences file for storing this information as well as the maximum number of
+	pictures per day to download.
+
+	This version still uses the original NG website as it still works okay.  I have
+	been able to download all images from 2001-04-21 to today, 2006-06-09.
+	It will only download images which exist on the server but don't exist on your
+	local drive in the path specified.  I put a 100 at a time limiter on the program
+	because it seems that National Geographic has processes in place to limit
+	the number of downloads or connections (possibly Denial Of Service attack
+	blockers), because it seemed to hang when trying to download all of them at once.
+	I tried again a few hours later and was able to download another 100.
+	
+	Like the version 1.0.0 it will download the large backdrop but it now gets the
+	description from the original photo of the day page.
+	
+	It will display the current picture of the day and wait for the window to close
+	before downloading the rest of the images.
+	
+	Version 1.1.0 by Charles Mougel: Used a different URL
+	
+	Version 1.0.0 by Ian Munroe: Downloads a single picture of the day - must be run 
+	everyday.
+
+	The argument &quot;-p&quot; causes a &quot;print to console&quot;.
+	These directions can be seen by adding a &quot;-h&quot; agrument."
+---
+{% include_relative ngbg2.r %}

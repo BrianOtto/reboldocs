@@ -1,0 +1,16 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "FastCGI Broker"
+license: "none"
+excerpt: "Rebol script broker for a hooked rebol interpreter launched as a FastCGI application.
+		This is the root script which runs others scripts on request of the FastCGI peer.
+	
+		This enables REBOL/Core or REBOL/View to act as a FastCGI application without the need
+		for REBOL/Command.
+	
+		This script only works on Windows with a patched REBOL interpreter.
+		Details available at http://mortimer.devcave.net/projects/rebfcgi
+	"
+---
+{% include_relative fcgi-broker.r %}

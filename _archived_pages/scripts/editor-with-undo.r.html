@@ -1,0 +1,18 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Editor with Undo"
+excerpt: "
+
+        Demonstrates how alter REBOL's built in text editor.  Romano Paolo
+        Tenca's &quot;edit-text-undo&quot; (http://www.rebol.it/romano/edit-text-undo.txt)
+        is incorporated.  The color scheme and help text in the editor are also
+        adjusted.  The key to making the changes is in the lines:
+
+        ctx-edit: mold :ctx-edit
+        (make changes to the code in ctx-edit)
+        ctx-edit: do ctx-edit
+
+    "
+---
+{% include_relative editor-with-undo.r %}

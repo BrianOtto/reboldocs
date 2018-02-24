@@ -1,0 +1,25 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "request-date object/func optimization and enhancment"
+license: "none"
+excerpt: "
+		This is an enhanced replacement for the original request-date function,
+		the embedded date picker in view (datepicker).
+		
+		- Clean, correct and optimize the code.
+		- add day names at top of window (use system/locales/days).
+		- add first-day-of-week value to choose starting with Sunday
+		  or Monday.
+		  (I think this value should be part of system/locales)
+		- add Today button at bottom.
+		- Today is shown with red circle in calendar.
+		
+		- New refinment:  'request-date/date a-date  to initialize the calendar.
+		  This date is shown with red square in calendar, and is
+		  retuned instead of none if the window is closed.
+		  
+		WARNING ! It needs View 1.2.8+ to work
+	"
+---
+{% include_relative request-date.r %}

@@ -1,0 +1,30 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Native requestors"
+license: "none"
+excerpt: "
+		Replaces a number of REBOL requestors with native equivalents.
+		Windows requires COMLib.r from http://anton.wildit.net.au/rebol/os/windows/COMLib/
+
+		REQUESTOR			Mac	Win
+		alert				Y	Y
+		confirm				Y	Y
+		request				Y	Y
+		request-color		Y	N
+		request-date		N	N
+		request-dir			Y	Y
+		request-download	N	N
+		request-file		N	N
+		request-list		Y	N
+		request-pass		Y	N
+		request-text		Y	Y
+		say (new)			Y	Y
+		
+		Added following requestors/funcs:
+			open-file
+			save-file
+			send-keys (Windows uses tmp.vbs)
+	"
+---
+{% include_relative native-requestors.r %}

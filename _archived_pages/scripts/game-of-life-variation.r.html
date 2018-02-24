@@ -1,0 +1,15 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "A Variation on Conway's Game of Life "
+license: "none"
+excerpt: " A GUI implementation of a modified version of the popular cellular automaton system.
+			The rules:  1) Each cell (square) on the grid is either alive (blue) or dead (white) 
+					2) For every iteration, each cell's next state depends on current state and # of live neighbors 
+						a) if cell is alive, it stays alive <=> 2 or 3 neighbors are alive
+						b) if cell is dead, becomes alive <=> exactly 3 neighbors are alive  
+					3) Each cell's 8 neighbors comprise of adjacent cells unless it is on the edge, then use wrap-around rule
+			Choose initial configuration of live cells (click cells to toggle between states) or &quot;RANDOMIZE&quot;, start, and watch patterns emerge
+	"
+---
+{% include_relative game-of-life-variation.r %}

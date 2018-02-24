@@ -1,0 +1,24 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Code 3 of 9 (Code 39) Barcode Generator"
+license: "none"
+excerpt: "
+		Generates Code 39 barcode images which can be printed out and read with a
+		standard barcode reader.
+
+		Code 39 is limited to the alphanumeric characters listed in the 'code39
+		block within the function.
+
+		It is a very popular barcode format in the US and doesn't need to conform
+		to any particular length of characters and has no limitations placed on it
+		by any sanctioning body regarding what it can be used for.
+
+		This version does not support checksum digits, but this could be added
+		easily.  Perhaps in a future version.
+
+		Wrote this to generate barcodes for my corporation, &quot;RespecTech, Inc.&quot;, to
+		internally track inventory.
+	"
+---
+{% include_relative code39.r %}

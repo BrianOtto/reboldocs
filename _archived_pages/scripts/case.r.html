@@ -1,0 +1,20 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "CASE multiple conditional function"
+license: "none"
+excerpt: "
+        Provide a generalized multiple conditional function for situations that would otherwise call for 
+        deeply nested EITHER blocks. CASE is more general than SWITCH because the conditions can be any 
+        DO-able block rather than being based on a single value. This can be used simply to allow a 
+        SWITCH-like behavior that supports ranges instead of single values, e.g.:
+            print case [
+              [ lesser? x 1 ] [ &quot;x < 1&quot; ]
+              [ equal? x 1 ] [ &quot;x = 1&quot; ]
+              [ greater? x 1 ] [ &quot;x > 1&quot;]
+            ]
+        It can also be used for more complex situations, since any DO-able block can be used for the 
+        condition block.
+    "
+---
+{% include_relative case.r %}

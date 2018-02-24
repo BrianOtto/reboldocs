@@ -1,0 +1,26 @@
+---
+section: "scripts"
+chapter: "domain"
+title: "Tric Trac"
+excerpt: "
+        A quick implementation of a simple board game.  Created with a 
+        student as a tutorial example.
+        The point is to roll the dice, and match the rolled number with
+        any combination of available number buttons above.  For example,
+        if you roll a 6, you can match it with the number button 6, or
+        5 + 1, or 4 + 2, or 3 + 2 + 1, etc.  Once a number button has
+        been selected, it cannot be used again for the rest of the game.
+        The game is over when you have no possible combinations of number
+        buttons to match the rolled value.  To determine your final score,
+        sum the remaining number buttons (see the bottom left of the
+        screen).  The goal is to get the lowest final score.  When playing
+        against others, each player takes turns clearing the board - or
+        you can just play against yourself, always trying to get the
+        lowest possible score.
+        Another way to play is to count the total number of rolls required
+        to clear the board.  The goal is to turn all the buttons in the
+        fewest number of rolls.  To make this game go faster, play with
+        only numbers 5-10.
+    "
+---
+{% include_relative trictrac.r %}
