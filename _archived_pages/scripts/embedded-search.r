@@ -19,7 +19,7 @@ REBOL [
      tested-under: none
      support: none
      license: none
-     see-also: document-search.r
+     see-also: %document-search.r
    ]
 ]
 

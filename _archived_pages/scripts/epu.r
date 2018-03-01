@@ -12,7 +12,7 @@ library: [
      domain: 'gui
      tested-under: [view 2.7.6 on linux]
      support: none
-     license: public-domain
+     license: 'public-domain
      see-also: none
     ]
 ]

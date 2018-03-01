@@ -13,7 +13,7 @@ REBOL [
     ]
     library: [
         level: 'intermediate 
-        platform: all 
+        platform: 'all 
         type: [tool] 
         domain: 'text-processing 
         tested-under: none 

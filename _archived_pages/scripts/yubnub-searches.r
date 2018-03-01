@@ -17,7 +17,7 @@ REBOL[
 		platform: 'all
 		type: [tool]
 		domain: [web html]
-		tested-under: winXP
+		tested-under: 'winXP
 		support: none
 		license: 'BSD
 		see-also: none

@@ -2,7 +2,7 @@ rebol [
    Library: [
         level: 'intermediate
         platform: 'all
-        type: tool
+        type: 'tool
         domain: [math]
         tested-under: none
         support: none

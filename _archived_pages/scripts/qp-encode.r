@@ -18,9 +18,9 @@ rebol [
 	comment: {More info about this encoding:
 		http://www.faqs.org/rfcs/rfc2045.html}
   	library: [
-		level: intermediate 
-		platform: all
-		type: function 
+		level: 'intermediate 
+		platform: 'all
+		type: 'function 
 		domain: [email text-processing] 
 		tested-under: none 
 		support: none 

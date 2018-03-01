@@ -16,7 +16,7 @@ REBOL [
                                type: [tutorial tool]
                                domain: [math]
                                tested-under: "Windows"
-                               support: riki100024 AT gmail DOT com
+                               support: "riki100024 AT gmail DOT com"
                                license: {CC 3.0 Attribution only}
                                see-also: none
     ]

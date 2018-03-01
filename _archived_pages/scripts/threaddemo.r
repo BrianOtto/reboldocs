@@ -12,7 +12,7 @@ REBOL [
         platform: 'all
         type: [tool demo] 
         domain: [gui]   
-        tested-under: 'win 'Mac Classic 'Linux 'BeOS
+        tested-under: 'win 'Mac 'Linux 'BeOS
         support: none 
         license: 'pd 
     ]

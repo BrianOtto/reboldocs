@@ -19,7 +19,7 @@ REBOL [
         domain: [cgi web]
         tested-under: none
         support: none
-        license: bsd
+        license: 'bsd
         see-also: none
     ]
 ]

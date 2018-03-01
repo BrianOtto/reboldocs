@@ -13,7 +13,7 @@ Rebol [
         platform: 'mac
         type: 'tool
         domain: []
-        tested-under: OSX 10.4
+        tested-under: 'OSX
         support: none
         license: 'BSD
         see-also: none

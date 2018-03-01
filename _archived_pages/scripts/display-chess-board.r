@@ -26,7 +26,7 @@ REBOL [
         plugin: [size: 470x500]
         tested-under: none 
         support: none 
-        license: pd 
+        license: 'pd 
         see-also: none
     ]
     Version: 1.0.0

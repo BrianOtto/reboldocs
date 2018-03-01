@@ -17,7 +17,7 @@ rebol [
 		domain:         [ external-library dialects shell  ]
 		tested-under:   [win view 2.7.5]
 		license:        'MIT
-		see also:       "vprint.r args-test.r"
+		see-also:       "vprint.r args-test.r"
 	]
 
 

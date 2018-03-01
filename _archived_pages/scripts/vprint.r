@@ -16,7 +16,7 @@ rebol [
         domain: [external-library debug file-handling testing]
         tested-under: [win view 2.7.5]
         license: 'MIT
-        see also: none
+        see-also: none
     ]
     
 	changes: {}

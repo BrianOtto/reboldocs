@@ -20,7 +20,7 @@ REBOL [
                 plugin: [size: 740x252]
 		tested-under: [view 1.3.2.4.2 Debian GNU/Linux 4.0 RC 1] 
 		support: none
-		license: GPL
+		license: 'gpl
 		see-also: none
 	]
 ]

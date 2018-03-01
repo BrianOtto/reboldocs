@@ -4152,7 +4152,7 @@ rotate  30 fill-pen red box 100x100 300x300
 rotate -60 fill-pen yellow box 100x100 300x300
 ]]]}]
 
-return text "See also:" 
+return text "see-also:" 
 return link "http://www.w3.org/TR/SVG/coords.html#EstablishingANewUserSpace"
 return label "SCALE"
 return text 100 {Sets the scale for drawing commands.
@@ -4182,7 +4182,7 @@ fill-pen blue box 100x100 200x200
 push [scale 2  .5  fill-pen red box 100x100 200x200]
 scale .5 1.5 fill-pen yellow box 100x100 200x200
 ]]]}]
-return text "See also:"
+return text "see-also:"
 return link "http://www.w3.org/TR/SVG/coords.html#EstablishingANewUserSpace"
 return label "SHAPE"
 return text 100 {Draws shapes using the SHAPE sub-dialect
@@ -4312,7 +4312,7 @@ push [skew .25 fill-pen red box 150x150 250x250]
 skew -.25 fill-pen yellow box 200x200 300x300
 ]]]}] 
 
-return text "See also:"
+return text "see-also:"
 return link "http://www.w3.org/TR/SVG/coords.html#EstablishingANewUserSpace"
 
 return label "SPLINE"
@@ -4425,7 +4425,7 @@ transform
 
 Notes and Examples
 
-See also:
+see-also:
     Viewtop REBOL/tests/draw-matrix.r}
 return link "http://www.w3.org/TR/SVG/coords.html#TransformAttribute"
 
@@ -4464,7 +4464,7 @@ fill-pen blue box 50x50 150x150
 push [translate 50x50 fill-pen red box 50x50 150x150]
 translate 50x50 fill-pen yellow box 100x100 300x300
 ]]]}] 
-return text "See also:"
+return text "see-also:"
 return link "http://www.w3.org/TR/SVG/coords.html#EstablishingANewUserSpace"
 
 return label "TRIANGLE"

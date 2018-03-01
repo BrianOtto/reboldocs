@@ -14,7 +14,7 @@ rebol[
 		Domain: [gui sound]
 		Tested-under: [windows firefox ]
 		support: ["ask" ]
-		License: pd
+		License: 'pd
 	]
 ]
 

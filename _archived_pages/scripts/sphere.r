@@ -31,10 +31,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         level: 'intermediate
         platform: 'all
         type: [demo]
-        domain: graphics
+        domain: 'graphics
         tested-under: [view 1.3.2 WinXP]
         support: phil.bevan@gmail.com
-        license: mit
+        license: 'mit
         see-also: none
         ]
 

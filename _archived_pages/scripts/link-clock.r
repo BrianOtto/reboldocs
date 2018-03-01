@@ -2,9 +2,9 @@ REBOL [
     Library: [
         level: 'intermediate
         platform: 'all
-        type: tool
-        domain:  VID
-        tested-under: windows XP
+        type: 'tool
+        domain:  'VID
+        tested-under: 'windows
         support: none
         license: none
         see-also: none

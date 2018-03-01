@@ -39,7 +39,7 @@ REBOL [
     ]
     library: [
         level: 'intermediate 
-        platform: all 
+        platform: 'all 
         type: [tool] 
         domain: 'file-handling 
         tested-under: [View 1.3.2.3.1 on "Windows XP"] 

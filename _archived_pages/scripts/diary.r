@@ -15,7 +15,7 @@ REBOL [
         domain: []
         tested-under: "Windows rebol view 2.7"
         support: none
-        license: GNU
+        license: 'GNU
         see-also: none
     ]
 ] 

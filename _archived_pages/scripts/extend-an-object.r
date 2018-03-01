@@ -6,7 +6,7 @@ rebol [
      domain: [file-handling text]
      tested-under: none
      support: none
-     license: pd
+     license: 'pd
      see-also: none
    ]
     file: %extend-an-object.r

@@ -17,7 +17,7 @@ REBOL [
       level: 'intermediate
       type: 'tool
       domain: [file-handling user-interface]
-      platform: all
+      platform: 'all
       tested-under: none
       support: none
       license: none

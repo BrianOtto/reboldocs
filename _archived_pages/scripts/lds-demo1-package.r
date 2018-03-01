@@ -15,7 +15,7 @@ REBOL [
      domain: [game vid]
      tested-under: [win]
      support: none
-     license: bsd
+     license: 'bsd
     comment: {images in this package are copyright Sunanda}
      see-also: none
    ]

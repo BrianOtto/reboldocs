@@ -13,7 +13,7 @@ REBOL [
         domain: [cgi web compression encryption extension http protocol other-net ]
         tested-under: [win]
         support: marco@ladyreb.org
-        license: PD
+        license: 'PD
         see-also: none
     ]
     Comment: {At the origin was Rugby, next Soccer and easy-soccer, and now easy-service}

@@ -4,10 +4,10 @@ REBOL[
 	Date: 15-Jul-2004
 	Purpose: "  Hopefully growing tool-list  "
 	Library: [
-		level: intermediate 
+		level: 'intermediate 
 		platform: 'all 
-		type: demo 
-		domain: extension 
+		type: 'demo 
+		domain: 'extension 
 		tested-under: none 
 		support: none 
 		license: none 

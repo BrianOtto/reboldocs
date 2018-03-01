@@ -8,7 +8,7 @@ REBOL  [
     Notes:     {This script requires View 1.3}
     History: [1.0.0 [22-Nov-2005 "First Version"] ]
     Library: [
-        level: intermediate
+        level: 'intermediate
         platform: 'all
         type: [demo tool]
         domain: [sdk GUI]

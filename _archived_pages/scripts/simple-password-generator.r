@@ -14,9 +14,9 @@ REBOL [
         platform: 'all
         type: [tool]
         domain: none
-        tested-under: Windows
-        support: all
-        license: GNU
+        tested-under: 'windows
+        support: 'all
+        license: 'GNU
         see-also: none
     ]
 

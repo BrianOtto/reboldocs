@@ -23,7 +23,7 @@ REBOL [
 		tested-under: [View 2.7.8.3.1]
 		support: none
 		license: none
-		see-also: nehe.gamedev.net
+		see-also: http://nehe.gamedev.net
 	]
 ]
 

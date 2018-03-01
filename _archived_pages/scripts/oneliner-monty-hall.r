@@ -15,7 +15,7 @@ doors, two goats, and a car).}
         domain: [game]
         tested-under: none
         support: none
-        license: pd
+        license: 'pd
         see-also: none
     ]
 ]

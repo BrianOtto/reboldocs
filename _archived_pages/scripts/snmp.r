@@ -50,7 +50,7 @@ REBOL [
 		domain: [other-net protocol]
 		tested-under: "Mac OsX"
 		support: vdemongodin@free.fr
-		license: gpl
+		license: 'gpl
 		see-also: none
         ]
 ]

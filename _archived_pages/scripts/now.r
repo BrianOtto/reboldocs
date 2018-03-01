@@ -6,9 +6,9 @@ Purpose: {Newbie exercise (written by a newbie) to learn more about the NOW Func
 Date: 6-Aug-2004
     library: [
         level: 'beginner 
-        domain: math
-Platform: all
-Type: tool
+        domain: 'math
+platform: 'all
+type: 'tool
 Tested-under: none
 Support: none
 License: none

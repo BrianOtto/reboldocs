@@ -13,7 +13,7 @@ rebol[
 		Domain: [extension gui sound ui]
 		Tested-under: [windows firefox ]
 		support: ["ask" ]
-		License: pd
+		license: 'pd
 	]
 ]
 

@@ -15,7 +15,7 @@ REBOL [
 		domain: [scientific math]
 		tested-under: [core 2.7.6.3.1 Windows XP] 
 		support: none
-		license: GPL
+		license: 'GPL
 		see-also: none
         Disclaimer: {this was tested for UTF-8 and may not work for other encodings.}
 	]

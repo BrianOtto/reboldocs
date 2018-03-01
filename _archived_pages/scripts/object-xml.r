@@ -5,12 +5,12 @@ rebol [
 	version: 1.1.0
 	author: {James Nakakihara}
 	email: james@rebsoft.com
-	purpose: {Takes the output and/or object format from xml-object.r by Brian Wisti and Gavin F. McKenzie and formats it back into xml. See also xml-parse by the same authors to provide the input from an xml file to xml-object.r. }
+	purpose: {Takes the output and/or object format from xml-object.r by Brian Wisti and Gavin F. McKenzie and formats it back into xml. see-also xml-parse by the same authors to provide the input from an xml file to xml-object.r. }
 	Acknowledgements: {Brian and Gavin for creating those tools and from the Rebol3 Altme World: Maxim, Oldes, Graham, Gregg, and Izkata. Without whom, I'd still be stuck.
 	}
 	Usage: {out: object-xml obj 
 		- where 'out' is a string to hold output and 'obj' is your xml object(s) from xml-object.r
-		See also comment at end of this document.
+		see-also comment at end of this document.
 		}
 	]
         library: [

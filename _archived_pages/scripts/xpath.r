@@ -2,7 +2,7 @@ REBOL [
    Library: [
         level: 'intermediate
         platform: 'all
-        type: tool
+        type: 'tool
         domain: [ai xml]
         tested-under: none
         support: none

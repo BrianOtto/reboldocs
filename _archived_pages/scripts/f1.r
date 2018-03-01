@@ -11,7 +11,7 @@ Rebol [title: "F1 demo"
 		domain: [animation game graphics gui vid visualization] 
 		tested-under: [winxp linux] 
 		support: none 
-		license: gpl
+		license: 'gpl
 		see-also: none 
 		]
 ]

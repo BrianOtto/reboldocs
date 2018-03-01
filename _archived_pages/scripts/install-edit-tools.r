@@ -6,7 +6,7 @@ REBOL [
     Author: "Volker Nitsch" 
     Date: 14-Apr-2005 
     Version: 1.0.5 
-    License: BSD 
+    license: 'bsd 
     See: [] 
     Purpose: {
  Various stuff to implement an editor.
@@ -998,7 +998,7 @@ write
 ^-]
 ^-library: [
 ^-^-level: 'intermediate
-^-^-platform: all
+^-^-platform: 'all
 ^-^-type: [tool]
 ^-^-domain: [text text-processing]
 ^-^-tested-under: none

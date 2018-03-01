@@ -1,8 +1,7 @@
 ---
 section: "scripts"
-chapter: "domain"
 title: "RebCall system"
-license: "none"
+license: "bsd"
 excerpt: " Call DLL functions efficiently with REBOL/View without the need for REBOL/View/Pro or REBOL/Command.
 		This script only works on Windows with a patched REBOL interpreter.
 		Details available at http://mortimer.devcave.net/projects/rebcall
@@ -14,5 +13,6 @@ excerpt: " Call DLL functions efficiently with REBOL/View without the need for R
 			- get-env has to be defined (and get process environment variables)
 			- struct! datatype must be available.
 	"
+categories: [external-library, extension, win-api]
 ---
 {% include_relative rebcall.r %}

@@ -16,7 +16,7 @@ REBOL [
         platform: 'all
         type: [reference  tool tutorial]
         domain: [text text-processing user-interface]
-        tested-under: linux
+        tested-under: 'linux
         support: none
         license: none
         see-also: none

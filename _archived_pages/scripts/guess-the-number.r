@@ -25,8 +25,8 @@ REBOL [
                        type: [tutorial]
                        domain: [game]
                        tested-under: 'Windows
-                       support: riki100024 AT gmail DOT com
-                       license: CC 3.0 Attribution only
+                       support: "riki100024 AT gmail DOT com"
+                       license: "CC 3.0 Attribution only"
                        see-also: none
     ]
 

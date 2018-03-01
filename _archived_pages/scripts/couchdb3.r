@@ -19,7 +19,7 @@ REBOL [
 		domain: [database http] 
 		tested-under: {R3 2.100.96.3.1, couchdb 0.10.0} 
 		support: none 
-		license: bsd
+		license: 'bsd
 		see-also: none 
 	] 
 	History: [

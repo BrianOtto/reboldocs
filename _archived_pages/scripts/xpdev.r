@@ -2,9 +2,9 @@ rebol [
     Library: [
         level: 'intermediate
         platform: 'all
-        type: tool 
+        type: 'tool 
         domain: 'files
-        tested-under: windows XP SP2
+        tested-under: 'windows
         support: none
         license: none
         see-also: none

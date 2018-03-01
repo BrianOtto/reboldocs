@@ -29,7 +29,7 @@ REBOL [ File: %rif.r
 		type: [tool database protocol module]
 		domain: [file database module]
 		tested-under: {R3 2.100.99.3.1 windows XP}
-		license: pd
+		license: 'pd
 		support: none
 		see-also: none
 		]

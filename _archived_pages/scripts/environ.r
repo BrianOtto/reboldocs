@@ -22,7 +22,7 @@ REBOL[
         platform: 'all
         tested-under: [ core 2.6.2.2.4 "Mac OS X 10.2.8"]
         support: none
-        license: cc-by 
+        license: 'cc-by 
         {see http://www.rebol.org/cgi-bin/cgiwrap/rebol/license-help.r}
     ]
 ]

@@ -2,11 +2,11 @@ REBOL [
   Library: [
      level: 'beginner
      platform: 'all
-     type: tool
-     domain: email
-     tested-under: Linux - Windows
+     type: 'tool
+     domain: 'email
+     tested-under: 'linux 'windows
      support: None
-     license: GPL
+     license: 'gpl
      see-also: none
    ]
 

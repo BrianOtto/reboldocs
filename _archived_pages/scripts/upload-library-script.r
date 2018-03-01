@@ -25,11 +25,11 @@ REBOL [
 	Library: [
 		level: 'intermediate
 		platform: 'all
-		type: tool
+		type: 'tool
 		domain: [file-handling gui other-net vid web]
 		tested-under: none
 		support: none
-		license: GPL
+		license: 'gpl
 		see-also: none
 	]]
 

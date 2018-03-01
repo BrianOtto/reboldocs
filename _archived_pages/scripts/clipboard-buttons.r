@@ -13,7 +13,7 @@ REBOL [
         tested-under: none 
         support: none 
         license: none
-        see-also: buttons.r
+        see-also: %buttons.r
     ]
 ]
 

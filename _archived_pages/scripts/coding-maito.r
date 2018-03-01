@@ -19,7 +19,7 @@ REBOL[
 		type: [tool]
 		domain: [email encryption html text ]
 		Tested-under: 'win
-		Support: pl--legoff--free-fr
+		Support: 'pl--legoff--free-fr
 		License: none
 		
 	]

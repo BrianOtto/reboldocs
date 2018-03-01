@@ -12,7 +12,7 @@ REBOL [
         domain: [dialects parse]
         tested-under: none
         support: none
-        license: mit
+        license: 'mit
         see-also: none
 	requirements: "rebdb from dobeash, dcmDict.ctl and dcmDict.dat"
 	notes: "the contents of dcmDict.ctl an dcmDict.dat can be found at the end of this script as a comment.  Copy these lines to separate files in order to be able to use implicit little endian."

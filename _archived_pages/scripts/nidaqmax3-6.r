@@ -13,7 +13,7 @@ library: [
         platform: 'all 
         type: 'tool 
         domain: [] 
-        tested-under: view 2.7.6 on [Mac OSX] 
+        tested-under: "view 2.7.6 on [Mac OSX]"
         support: none 
         license: "BSD-3 - https://github.com/dockimbel/Red/blob/master/BSD-3-License.txt"
  		see-also: none

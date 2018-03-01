@@ -21,7 +21,6 @@ foreach fileName read scriptDir [
 
         append jekyll "---"
         append jekyll "section: ^"scripts^""
-        append jekyll "chapter: ^"domain^""
         
         if find script/1 'title [
             title: script/1/title
@@ -30,8 +29,10 @@ foreach fileName read scriptDir [
         ]
         
         if find script/1 'library [
-            either find script/1/library 'license [
-                append jekyll join "license: ^"" [script/1/library/license "^""]
+            library: make object! script/1/library
+            
+            either find library 'license [
+                append jekyll join "license: ^"" [library/license "^""]
             ][
                 append jekyll "license: ^"none^""
             ]
@@ -45,13 +46,17 @@ foreach fileName read scriptDir [
         ]
         
         if find script/1 'library [
-            if find script/1/library 'domain [
-                domain: to string! script/1/library/domain
-                replace/all domain "'" ""
+            library: make object! script/1/library
+            
+            either find library 'domain [
+                domain: form library/domain
+                
                 replace/all domain " " ", "
                 
                 if domain/1 != "[" [ insert domain "[" insert tail domain "]" ]
-                append jekyll join-of "categories: ^"" [domain "^""]
+                append jekyll join "categories: " [domain]
+            ][
+                append jekyll "categories: [none]"
             ]
         ]
         

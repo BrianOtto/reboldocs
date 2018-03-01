@@ -19,10 +19,10 @@ REBOL [
         platform: 'all
         type: [tool] 
         domain: [gui]   
-        tested-under: 'Mac OSX 'Linux 
+        tested-under: 'OSX 'Linux 
         support: none 
         license: 'pd 
-        see-also: 
+        see-also: ""
     ]
     
 ]

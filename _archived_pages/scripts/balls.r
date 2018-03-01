@@ -11,7 +11,7 @@ REBOL [
 		type: 'fun
 		domain: [graphics animation]
 		tested-under: none
-		license: public-domain
+		license: 'public-domain
 		see-also: none
 	]
 ]

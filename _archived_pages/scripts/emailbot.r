@@ -20,7 +20,7 @@ REBOL [
         platform: 'all
         type: 'how-to
         domain: [web email other-net] 
-        tested-under: 'linux / windoze
+        tested-under: [linux windows]
         support: none 
         license: none 
         see-also: none

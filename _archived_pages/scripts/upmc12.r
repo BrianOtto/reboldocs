@@ -14,7 +14,7 @@ REBOL [
         platform: 'all
         type: [tool demo] 
         domain: [gui]   
-        tested-under: 'win 'Mac OSX 'Linux
+        tested-under: 'win 'OSX 'Linux
         support: none 
         license: 'pd 
     ]

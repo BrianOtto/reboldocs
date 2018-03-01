@@ -4,7 +4,7 @@ REBOL [
     Version: 1.0.0
     File: %smail.r
     Author: "Freakzen-LX"
-    Purpose: "small mail client with timer and logging function "
+    Purpose: "small mail client with timer and logging function"
     Email: freakzen-lx@haekchenadmin.de
     library: [
         level: none 

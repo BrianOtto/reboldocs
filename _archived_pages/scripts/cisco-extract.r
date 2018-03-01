@@ -14,7 +14,7 @@ REBOL [
 			platform: 'windows
 			type: [tool]
 			domain: [networking]
-			tested-under: windows_XP
+			tested-under: 'windows_XP
 			support: none
 			license: none
 			see-also: none

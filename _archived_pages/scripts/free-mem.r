@@ -6,7 +6,7 @@ REBOL [
      domain: 'patch 
      tested-under: 'win2k
      support: none
-     license: gpl
+     license: 'gpl
      see-also: none
    ]
 

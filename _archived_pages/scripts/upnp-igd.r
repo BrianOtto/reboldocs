@@ -15,7 +15,7 @@ REBOL [
         domain: [game extension http protocol other-net html markup parse protocol tcp xml ]
         tested-under: [win]
         support: marco@ladyreb.org
-        license: PD
+        license: 'pd
         see-also: none
     ]
     Comment: {

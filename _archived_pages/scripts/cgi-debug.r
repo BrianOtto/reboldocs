@@ -12,7 +12,7 @@ REBOL [
         domain: [cgi web]
         tested-under: [win unix linux]
         support: none
-        license: bsd
+        license: 'bsd
         see-also: none
     ]
 ]

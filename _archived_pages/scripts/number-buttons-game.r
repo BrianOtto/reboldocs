@@ -31,7 +31,7 @@
                                         type: [game]
                                         domain: [game]
                                         tested-under: "Windows"
-                                        support: riki100024 AT gmail DOT com
+                                        support: "riki100024 AT gmail DOT com"
                                         license: {
                                                      This simple game is licensed under the
                                                      CC 3.0 Attribution only license.

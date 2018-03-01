@@ -13,7 +13,7 @@ rebol [
         domain: [debug file-handling parse text-processing]
         tested-under: [view 2.7.8]
         support: none 
-        license: pd
+        license: 'pd
         see-also: none
     ]
 	

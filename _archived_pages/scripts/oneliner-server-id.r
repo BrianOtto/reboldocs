@@ -13,7 +13,7 @@ Rebol [
         domain: [web other-net]
         tested-under: none
         support: none
-        license: pd
+        license: 'pd
         see-also: none
     ]
 ]

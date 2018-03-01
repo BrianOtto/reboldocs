@@ -28,7 +28,7 @@ rebol [
      tested-under: none
      support: none
      license: none
-     see-also: find-file.r
+     see-also: %find-file.r
    ]
 ]
 

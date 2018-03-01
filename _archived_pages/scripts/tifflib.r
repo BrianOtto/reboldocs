@@ -23,7 +23,7 @@ library: [
         platform: 'all
         type: [tool ]
         domain: [file-handling]
-        tested-under: all plateforms
+        tested-under: 'all
         support: none
         license: 'BSD
         see-also: none

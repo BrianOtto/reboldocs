@@ -39,7 +39,7 @@ REBOL [
         domain: [database external-library] 
         tested-under: [view 1.2.47.4.2 linux view 1.2.10.3.1 windows]
         support: none 
-        license: public-domain
+        license: 'public-domain
         see-also: %sqlite3.r
     ]
 ]

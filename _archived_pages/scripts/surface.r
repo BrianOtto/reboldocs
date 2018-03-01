@@ -30,7 +30,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         domain: 'math
         tested-under: ["view 1.3.2.3.1"]
         support: none
-        license: mit
+        license: 'mit
         see-also: none
     ]
 ]

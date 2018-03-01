@@ -11,7 +11,7 @@
                           domain: [math]
                           tested-under: [View 1.2.47.3.1 Windows XP]
                           support: marco@ladyreb.org
-                          license: PD
+                          license: 'pd
    	]
 ]
 round: func [

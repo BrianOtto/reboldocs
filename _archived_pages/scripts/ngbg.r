@@ -22,7 +22,7 @@ at. These directions can be seen by adding a -h agrument.
        platform: 'all
        type: [demo tool]
        domain: [markup text-processing web] 
-       tested-under: win
+       tested-under: 'win
        support: johnatemps@yahoo.fr
        License: none
         ]

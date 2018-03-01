@@ -10,10 +10,10 @@ Rebol [
         platform: 'all
         type: [tool] 
         domain: [gui]   
-        tested-under: 'Mac OSX 'Linux 'Windows
+        tested-under: 'OSX 'Linux 'Windows
         support: none 
         license: 'pd 
-        see-also: 
+        see-also: ""
    ]
 ]
 

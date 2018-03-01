@@ -13,7 +13,7 @@ REBOL [
         domain: [gui]
         tested-under: [win]
         support: marco@ladyreb.org
-        license: PD
+        license: 'pd
         see-also: none
     ]
     Purpose: {

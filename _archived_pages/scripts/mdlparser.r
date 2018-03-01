@@ -4,7 +4,7 @@ Library: [ level: 'intermediate
 platform: 'all 
 type: 'tool 
 domain: [xml html markup ] 
-tested-under: windows 
+tested-under: 'windows 
 support: none 
 license: none 
 see-also: none ]

@@ -26,7 +26,7 @@ REBOL [
         domain: [database external-library] 
         tested-under: [view 1.2.47.4.2 linux]
         support: none 
-        license: public-domain
+        license: 'public-domain
         see-also: none
     ]
 ]

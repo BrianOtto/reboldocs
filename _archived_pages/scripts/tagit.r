@@ -7,8 +7,8 @@ REBOL [
     Purpose: {generate tagged HTML blocks}
     Email: none
     library: [
-        level: beginner 
-        platform: windows 
+        level: 'beginner 
+        platform: 'windows 
         type: 'tool 
         domain: [html markup] 
         tested-under: none 

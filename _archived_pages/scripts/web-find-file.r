@@ -13,7 +13,7 @@ REBOL [
 	domain: [files] 
 	tested-under: none 
 	support: none 
-	license: gpl 
+	license: 'gpl 
 	see-also: none 
 	]
     

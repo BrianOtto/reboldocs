@@ -70,7 +70,7 @@ REBOL [
 	uses: 'face	
     library: [
         level: 'advanced 
-        platform: all 
+        platform: 'all 
         type: [tool] 
         domain: 'testing 
         tested-under: [View 1.3.2.3.1 on "Windows XP"] 

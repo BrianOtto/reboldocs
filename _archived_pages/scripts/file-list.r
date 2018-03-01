@@ -681,7 +681,7 @@ find-file-ctx: context [
         comparison functions into a single command. See the related
         functions for details:
 
-        See also:
+        see-also:
             file-date-match file-size-match file-attr-match file-spec-match
 
         Examples:

@@ -25,7 +25,7 @@ REBOL[
                         view 1.2.10.3.1 "Windows XP Professional"
         ]
         support: none
-        license: cc-by 
+        license: 'cc-by  
 	   {see http://www.rebol.org/cgi-bin/cgiwrap/rebol/license-help.r}
     ]
 ]

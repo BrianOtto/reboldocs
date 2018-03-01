@@ -14,7 +14,7 @@ REBOL [
 
 	Author: "Hostile Fork"
 	Home: http://hostilefork.com/2009/06/13/enumerated-type-for-rebol2/
-	License: mit
+	license: 'mit
 
 	File: %enum.r
 	Date: 12-Jun-2009
@@ -22,7 +22,7 @@ REBOL [
 
 	; Header conventions: http://www.rebol.org/one-click-submission-help.r
 	Type: function
-	Level: intermediate
+	level: 'intermediate
 	
 	Usage: { To declare a new enum type & initialize its 
 	possibilities, use make-enum-type:

@@ -13,7 +13,7 @@ REBOL [
         plugin: [size: 640x640]
         tested-under: none
         support: none
-        license: pd
+        license: 'pd
         see-also: "ascii-info.r"
     ]
 ]

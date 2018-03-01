@@ -7,7 +7,7 @@ rebol [
 		Level: 'beginner
 		platform: []
 		Type: 'function
-		Domain: patch
+		Domain: 'patch
 		tested-under: [some]
 		support: none
 		license: none

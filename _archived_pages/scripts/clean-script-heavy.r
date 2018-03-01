@@ -21,7 +21,7 @@ REBOL [
 	]
 	library: [
 		level: 'intermediate
-		platform: all
+		platform: 'all
 		type: [tool]
 		domain: [text text-processing]
 		tested-under: none

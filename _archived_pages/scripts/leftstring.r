@@ -11,7 +11,7 @@ REBOL [
       domain: [text text-processing]
       tested-under: [REBOL/Core 2.5.6.3.1 "windows XP Professionsl"]
       support: none
-      license: cc-by
+      license: 'cc-by 
       see-also: none
    ]
 	 Copyright: {Copyright (C) 2005 - Digital Bear Consulting}

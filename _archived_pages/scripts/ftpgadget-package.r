@@ -12,7 +12,7 @@ REBOL [
         domain: [FTP]
         tested-under: [win]
         support: none
-        license: MIT
+        license: 'mit
         see-also: none
     ]
 ]

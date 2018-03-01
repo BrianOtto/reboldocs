@@ -949,7 +949,7 @@ slim/register [
 			;---------------------
 			; called on every new !plug, of any type.
 			;
-			;  See also:  SETUP, CLEANSE, DESTROY
+			;  see-also:  SETUP, CLEANSE, DESTROY
 			;---------------------
 			init: func [
 				plug "plug to initialize" [object!]
@@ -986,7 +986,7 @@ slim/register [
 			; wrt liquid, so we can already call valve methods on the plug 
 			; (link, for example)
 			;
-			;  See also:  INIT, CLEANSE, DESTROY
+			;  see-also:  INIT, CLEANSE, DESTROY
 			;---------------------
 			setup: func [
 				plug [object!]
@@ -1012,7 +1012,7 @@ slim/register [
 			;
 			; optionally, you might want to unlink the plug or its members.
 			;
-			;  See also:  SETUP, INIT, DESTROY
+			;  see-also:  SETUP, INIT, DESTROY
 			;---------------------
 			cleanse: func [
 				plug [object!]
@@ -1039,7 +1039,7 @@ slim/register [
 			; after using destroy, the plug is UNUSABLE. it is completely broken and nothing is expected to be usable within.
 			; nothing short of calling init back on the plug is expected to work (usually completely rebuilding it from scratch) .
 			;
-			;  See also:  INIT SETUP CLEANSE
+			;  see-also:  INIT SETUP CLEANSE
 			;------------------------
 			destroy: func [
 				plug [object!]

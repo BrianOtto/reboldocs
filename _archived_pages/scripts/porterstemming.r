@@ -58,7 +58,7 @@ REBOL [
         domain: [text text-processing]
         tested-under: [view 2.7.6.3.1 "Windows XP"]
         support: none
-        license: BSD
+        license: 'bsd
         see-also: http://tartarus.org/~martin/PorterStemmer/
     ]
 ]

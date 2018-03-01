@@ -13,7 +13,7 @@ REBOL [
         domain: [dialects ai]
         tested-under: [win]
         support: mvri@bluewin.ch
-        license: public-domain
+        license: 'public-domain
         see-also: none
     ]
     

@@ -12,7 +12,7 @@ REBOL[
             - v. 1.1.0 : with a GUI for selecting log file }
     library: [
         level: 'beginner 
-        platform: all 
+        platform: 'all 
         type: 'tool 
         domain: [database] 
         tested-under: none 

@@ -10,7 +10,7 @@ REBOL [
 		type: [tool]
 		domain: [all]
                 support: none
-                license: gpl
+                license: 'gpl
 		tested-under: [View-2.8.1.4.2 Core-2.5.6.4.2 and-others]
 	]
 	Usage: {

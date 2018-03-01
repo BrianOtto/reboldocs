@@ -10,7 +10,7 @@ REBOL [
         level: 'intermediate 
         type: 'game 
         domain: [game graphics] 
-        license: public-domain 
+        license: 'public-domain 
         platform: 'all
         tested-under: "View 1.3.2.3.1 on WinXP"
         support: none

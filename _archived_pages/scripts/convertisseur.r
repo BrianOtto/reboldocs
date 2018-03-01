@@ -9,7 +9,7 @@ REBOL[
     note: {- v. 1.0.0 : convert Francs vs Euros  }
     library: [
         level: 'beginner 
-        platform: all 
+        platform: 'all 
         type: 'tool 
         domain: [user-interface] 
         tested-under: none 

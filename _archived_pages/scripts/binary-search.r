@@ -14,7 +14,7 @@ Rebol[
    }
       library: [
         level: 'intermediate
-        platform: all
+        platform: 'all
         type: 'function
         domain: 'text-processing
         tested-under: none

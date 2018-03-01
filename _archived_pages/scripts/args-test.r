@@ -21,7 +21,7 @@ rebol [
 		domain:         [ shell  ]
 		tested-under:   [win view 2.7.5]
 		license:        'MIT
-		see also:       "vprint.r args.r"
+		see-also:       "vprint.r args.r"
 	]
 ]
 
