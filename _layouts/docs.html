@@ -103,7 +103,9 @@
                                     <ul class="list-group">
                                         {% for pics in pagesInChapterSorted %}
                                         {% if pics.script-url == nil %}
+                                        {% unless page.url contains '/docs/archived/' %}
                                         <li class="list-group-item accordionDocSub p-2 ml-4 rounded-0 {% if pics.url == page.url or pics.url == page.script-url %}active{% endif %}" onclick="window.location.href = '{{ pics.url }}.html'">{% if page.url contains '/docs/archived/' %}<img class="pr-2" src="/assets/img/archived-script.png" width="30" height="30">{% endif %}{{ pics.title }}</li>
+                                        {% endunless %}
                                         {% endif %}
                                         {% endfor %}
                                     </ul>

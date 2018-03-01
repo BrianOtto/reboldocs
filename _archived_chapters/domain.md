@@ -18,3 +18,14 @@ e.g. (but using Bootstrap cards that span horizontally)
 </ul>
 
 The Front Matter will need to be parsed and added by a script.
+
+{% assign pages = site.collections | where: "label" , "archived_pages" | first %}
+{% assign pages = pages.docs | where: "section" , "scripts" %}
+
+Testing some sorting / categories logic (please ignore) ...
+
+<ul>
+    {% for ps in pages %}
+    <li>{{ ps.categories }}</li>
+    {% endfor %}
+</ul>
