@@ -10,7 +10,8 @@ body {
     background: #FFE url('/assets/img/archived-bg.png');
 }
 
-.card {
+.card,
+.table {
     /* Some alternatives ...
      * #637964 - Darker Green
      * rgba(0,0,0,0.1) - Dark Stripe, i.e. scripts.rebol.info
