@@ -2,7 +2,7 @@ REBOL [
     title: "FTP CHMOD"
     date: 31-jul-2010
     file: %ftp-chmod.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         This is a workaround for REBOL's inability to chmod files (set permissions)
         with the built in FTP protocol.  This script is for MS Windows, but Macintosh

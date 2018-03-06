@@ -2,7 +2,7 @@ REBOL [
     title: "Generic Playing Card Game Framework"
     date: 13-Jan-2010
     file: %playing-card-framework.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A simple demonstration of how to use the images in %playing-cards.r
         to create card games.  In this example, the cards are arranged in a way

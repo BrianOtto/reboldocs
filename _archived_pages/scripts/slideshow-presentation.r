@@ -2,7 +2,7 @@ REBOL [
     title: "Simple Slideshow Presentation Framework"
     date: 22-1-2013
     file: %slideshow-presentation.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
 
         This example is taken from the tutorial at:

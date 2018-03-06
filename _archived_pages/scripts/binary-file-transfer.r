@@ -2,7 +2,7 @@ REBOL [
     title: "Binary File Transfer"
     date: 4-Dec-2009
     file: %binary-file-transfer.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Demonstrates how to transfer binary files between 2 computers
         connected by a TCP port.  This is a shortened version of the script 

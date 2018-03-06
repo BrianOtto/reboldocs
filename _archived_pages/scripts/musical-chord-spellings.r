@@ -2,7 +2,7 @@ REBOL [
     title: "Musical Chord Spellings"
     date: 12-Dec-2013
     file: %musical-chord-spellings.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Prints out the notes that comprise many common types of chords, with all 12 root note variations.
         Sharps are used to label all accidental notes (no flat notes).

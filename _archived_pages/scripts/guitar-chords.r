@@ -2,7 +2,7 @@ REBOL [
     title: "Guitar Chords"
     date: 9-Dec-2009
     file: %guitar-chords.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
        Create and print instant guitar chord diagram charts for songs.
        Taken from the tutorial at http://re-bol.com

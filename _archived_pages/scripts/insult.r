@@ -2,7 +2,7 @@ REBOL [
     title: "Insult Generator"
     date: 31-Aug-2012
     file: %insult.r
-    author: Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Teaching some young children to program.  They loved this one.
         Be sure to see the tutorial at http://re-bol.com 

@@ -2,7 +2,7 @@ Rebol [
     title: "Textris"
     date: 29-june-2008
     file: %textris.r
-    author: Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         The game of Tetris, in text mode.  
         Taken from the tutorial at http://musiclessonz.com/rebol_tutorial.html

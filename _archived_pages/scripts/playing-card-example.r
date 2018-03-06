@@ -2,7 +2,7 @@ Rebol [
     title: "Playing Card Example"
     date: 29-june-2008
     file: %playing-card-example.r
-    author: Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         An example demonstrating how to work with graphical playing cards.  
         Taken from the tutorial at http://musiclessonz.com/rebol_tutorial.html

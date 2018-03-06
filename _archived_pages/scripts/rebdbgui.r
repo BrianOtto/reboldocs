@@ -18,7 +18,7 @@ REBOL [
         level: 'advanced
         platform: 'all
         type: [tutorial how-to]
-        domain: [gui db]
+        domain: [gui database]
         tested-under: [view 1.3.2.4.2 Debian GNU/Linux 4.0]
         support: http://www.rebol.org
         license: 'MIT

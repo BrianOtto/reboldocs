@@ -2,7 +2,7 @@ REBOL [
     title: "WAP Mail Reader CGI"
     date: 10-Aug-2010
     file: %wap-mail-reader.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Read email using your WAP cell phone browser.
     }

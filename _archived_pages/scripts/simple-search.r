@@ -2,7 +2,7 @@ REBOL [
     title: "Simple Search"
     date: 17-may-2009
     file: %simple-search.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Searches though all files in all subdirectories to find given text in each file. 
         Taken from the tutorial at http://musiclessonz.com/rebol_tutorial.html

@@ -2,7 +2,7 @@ REBOL [
     title: "WAP File Editor CGI"
     date: 10-Aug-2010
     file: %wap-file-editor.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Edit text file (insert only) using your WAP cell phone browser.
     }

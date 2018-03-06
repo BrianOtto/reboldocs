@@ -2,7 +2,7 @@ REBOL [
     title: "Remove Unwanted Emails CGI"
     date: 10-Aug-2010
     file: %remove-emails-cgi.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Remove any emails from your POP account which contain specified
         snippets of text.

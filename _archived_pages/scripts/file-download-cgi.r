@@ -2,7 +2,7 @@ REBOL [
     title: "File Download CGI"
     date: 10-Aug-2010
     file: %file-download-cgi.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Push file download from web server to browser.
     }

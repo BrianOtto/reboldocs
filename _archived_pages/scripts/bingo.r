@@ -2,7 +2,7 @@ REBOL [
     title: "Bingo Board"
     date: 12-Jan-2011
     file: %bingo.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Commercial bingo boards cost several thousand dollars.  We hook this up
         to a projector and use it to run Bingo for a non-profit organization :)

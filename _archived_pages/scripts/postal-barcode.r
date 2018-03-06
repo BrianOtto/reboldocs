@@ -2,7 +2,7 @@ REBOL [
     title: "Postal Barcode"
     date: 9-Feb-2011
     file: %postal-barcode.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Demonstrates how to use the Intelligent Mail encoder dll from 
         the US postal service.

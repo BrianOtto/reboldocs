@@ -2,7 +2,7 @@ REBOL [
     title: "Format Decimal"
     date: 20-Aug-2010
     file: %format-decimal.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Converts decimal numbers formatted in scientific notation to decimal notation.
     }

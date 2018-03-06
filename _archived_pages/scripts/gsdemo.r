@@ -2,7 +2,7 @@ REBOL [
     Title: "Grey-Soft: Bluetooth Accelerometer Acquisition 2.0"
     Date: 06-jul-2010
     Version: 2.0
-    Author: "François Jouen"
+    Author: "François Jouen"
     File: %gsdemo.r
     Purpose: {
         Using GS bluetooth XYZ devices with Rebol. This a demo version. 

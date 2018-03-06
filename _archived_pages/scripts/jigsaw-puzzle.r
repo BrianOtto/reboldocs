@@ -2,7 +2,7 @@ REBOL [
     title: "Jigsaw Puzzle - press SPACE bar to view original image"
     date: 14-Aug-2010
     file: %jigsaw-puzzle.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Chop a selected image into a selected number of pieces, and then
         drag/drop the pieces to reassemble the original image.

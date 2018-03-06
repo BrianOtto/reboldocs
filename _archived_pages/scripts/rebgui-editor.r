@@ -2,7 +2,7 @@ REBOL [
     title: "RebGUI Editor"
     date: 18-Apr-2010
     file: %rebgui-editor.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A minimal text editor program, written to demonstrate menus and a few
         other basic features of RebGUI.  

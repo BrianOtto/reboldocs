@@ -2,7 +2,7 @@ REBOL [
     title: "Captcha Example"
     date: 8-Apr-2010
     file: %captcha-example.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
 
         A minimal example demonstrating how to use the captcha library by SOFTINNOV:

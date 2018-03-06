@@ -2,7 +2,7 @@ REBOL [
     title: "Playing Card Images"
     date: 13-Jan-2010
     file: %playing-cards.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A data block of playing card images.  Use the following code to view:
 

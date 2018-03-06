@@ -2,7 +2,7 @@ REBOL [
     title: "Tric Trac"
     date: 7-Nov-2013
     file: %trictrac.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A quick implementation of a simple board game.  Created with a 
         student as a tutorial example.

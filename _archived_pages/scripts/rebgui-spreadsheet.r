@@ -2,7 +2,7 @@ REBOL [
     title: "RebGUI Spreadsheet Example"
     date: 18-Apr-2010
     file: %rebgui-spreadsheet.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A tiny demo of RebGUI's sheet widget, with save, load, print
         and data view features. 

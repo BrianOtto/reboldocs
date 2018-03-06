@@ -2,7 +2,7 @@ REBOL [
     title: "Tip Calculator"
     date: 4-Dec-2013
     file: %tipcalculator.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
 ]
 view layout [ 
      f: field "49.99" 

@@ -2,7 +2,7 @@ REBOL[
 	Title: "Yubnub search"
 	Version: 1.0.0
 	Copyright: "Philippe Le Goff-2007"
-    Author: {"Philippe Le Goff"}
+    Author: "Philippe Le Goff"
 	File: %yubnub-searches.r
 	Date: 3-Jan-2007
 	Purpose: {

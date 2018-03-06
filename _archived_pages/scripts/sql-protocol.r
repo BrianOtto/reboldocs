@@ -10,7 +10,7 @@ REBOL [
         level: 'intermediate
         platform: 'all
         type: [dialect protocol tool]
-        domain: [database db dialects protocol scheme sql]
+        domain: [database dialects protocol scheme sql]
         tested-under: [win]
         support: mvri@bluewin.ch
         license: 'public-domain

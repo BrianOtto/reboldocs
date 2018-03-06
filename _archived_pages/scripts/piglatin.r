@@ -2,7 +2,7 @@ REBOL [
     title: "Pig Latin"
     date: 4-Dec-2013
     file: %piglatin.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {Enter text, it displays the Pig Latin translation.}
 ]
 view layout [

@@ -2,7 +2,7 @@ REBOL [
     title: "Card File"
     date: 5-Mar-2010
     file: %card-file.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         This is the quintessential simple text field storage application. 
         It can be used as shown here, to save contact information, but by

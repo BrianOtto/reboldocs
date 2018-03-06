@@ -2,7 +2,7 @@ REBOL [
     Title: "UDP Group Chat"
     date: 3-Aug-2010
     file: %udp-group-chat.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Because this script uses UDP,  anyone who runs it on a local network will
         automatically receive messages broadcast by others on the same network.

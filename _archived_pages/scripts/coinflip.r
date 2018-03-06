@@ -2,7 +2,7 @@ REBOL [
     title: "Coin Flip"
     date: 27-Nov-2013
     file: %coinflip.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A little example for a student.  Click the button to randomly flip the coin image.
         Based on the example video at http://visualruby.net

@@ -2,7 +2,7 @@ REBOL [
     title: "Forum"
     date: 16-May-2010
     file: %forum.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A CGI forum application, running at http://rebolforum.com.
         Please link to it, so that new REBOLers have a place to ask questions!

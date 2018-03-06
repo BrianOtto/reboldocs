@@ -2,7 +2,7 @@ REBOL [
     title: "Time Requester"
     date: 29-Jun-2012 
     file: %time-requester.r 
-    author: Nick Antonaccio 
+    author: "Nick Antonaccio" 
     purpose: { 
         A simple GUI time requester
     } 

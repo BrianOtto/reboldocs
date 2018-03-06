@@ -17,7 +17,7 @@ REBOL [
 		level: 'intermediate
 		platform: 'all
 		type: [module database]
-		domain: [database db]
+		domain: [database]
 		tested-under: [view 2.7.6.2.4]
 		support: none
 		license: 'cc-by-sa

@@ -2,7 +2,7 @@ REBOL [
     title: "CGI Event Calendar"
     date: 18-Apr-2010
     file: %cgi-event-calendar.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
 
         A web site CGI application that displays events in the current

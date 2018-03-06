@@ -2,7 +2,7 @@ REBOL [
     title: "Convert Decimal to Binary"
     date: 2-aug-2014
     file: %convert-decimal-to-binary.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A quick example demonstrating the technique at
         https://www.youtube.com/watch?v=XdZqk8BXPwg

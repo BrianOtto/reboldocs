@@ -2,7 +2,7 @@ REBOL [
     title: "List Widget Example"
     file: %list-widget-example.r
     date: 8-jul-2010
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         This examples demonstrates how to use REBOL's native GUI list
         widget to manage a grid of data values.  Columns can be sorted

@@ -2,7 +2,7 @@ REBOL [
     title: "Choice Button Menu Example"
     date: 25-Sep-2010
     file: %choice-button-menu-example.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {A quick way to add a simple menu to VID GUIs}
 ]
 request: do replace/all mold :request "bold" ""  ; not required for menus

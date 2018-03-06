@@ -2,7 +2,7 @@ REBOL [
     title: "Asynchronous Get Keys"
     date: 18-Apr-2010
     file: %async-get-keys.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Demonstrates how to check for async keystrokes (including arrow keys) in the REBOL console. 
         Taken from the tutorial at http://re-bol.com

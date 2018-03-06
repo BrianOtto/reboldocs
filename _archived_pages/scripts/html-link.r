@@ -2,7 +2,7 @@ REBOL [
     title: "HTML Link"
     date: 18-Apr-2010
     file: %html-link.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Takes input string containing any number of URLs and outputs a 
         a string with all the web URLs appropriately wrapped as HTML links. 

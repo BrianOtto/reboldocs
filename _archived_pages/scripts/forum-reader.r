@@ -2,7 +2,7 @@ REBOL [
     title: "Forum Reader"
     date: 18-May-2010
     file: %forum-reader.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Offline reader to download, save, and read the entire collection
         of forum messages at http://rebolforum.com (i.e., to keep the

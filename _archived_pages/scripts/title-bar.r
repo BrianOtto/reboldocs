@@ -2,7 +2,7 @@ Rebol [
     title: "Title Bar - Windows API"
     date: 1-july-2008
     file: %title-bar.r
-    author: Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         This example demonstrates how to use the Windows API to adjust the title bar
         in your Rebol programs.  Just include this code in your script if you need

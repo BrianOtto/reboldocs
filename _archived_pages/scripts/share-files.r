@@ -2,7 +2,7 @@ REBOL [
     title: "Simple File Sharer"
     date: 19-Jan-2014
     file: %share-files.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         I use it to send lists of files to clients' phones, PCs, or any other
         Internet device they may use.  I text or email them the single short

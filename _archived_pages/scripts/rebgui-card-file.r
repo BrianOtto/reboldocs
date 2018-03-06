@@ -2,7 +2,7 @@ REBOL [
     title: "RebGUI Card File"
     date: 10-Mar-2010
     file: %rebgui-card-file.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
 
         This is an implementation of the Card File program at 

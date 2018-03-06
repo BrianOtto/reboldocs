@@ -2,7 +2,7 @@ REBOL [
     title: "POINT OF SALE SYSTEM"
     date: 28-Feb-10
     file: %pos.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         This is a point of sale system (sales checkout, receipt printer, and data
         storage system) written using RebGUI.  It may help provide some basic

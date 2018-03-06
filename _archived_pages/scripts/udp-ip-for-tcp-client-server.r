@@ -2,7 +2,7 @@ REBOL [
     title: "UDP IP Broadcast/Receive for TCP Client/Server"
     date: 26-jan-2014
     file: %udp-ip-for-tcp-client-server.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         This script demonstrates a solution to a typical problem encountered
         with TCP network apps.  A TCP server needs to be found at a known

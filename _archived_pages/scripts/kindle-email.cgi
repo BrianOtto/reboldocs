@@ -2,7 +2,7 @@ REBOL [
     title: "Kindle Email CGI Script" 
     date: 6-Nov-2011 
     file: %kindle-email.cgi 
-    author: Nick Antonaccio 
+    author: "Nick Antonaccio" 
     purpose: {
         This is a super simple email program which you can run on your web server
         to provide email access (read, send, delete, etc.) to multiple accounts, using

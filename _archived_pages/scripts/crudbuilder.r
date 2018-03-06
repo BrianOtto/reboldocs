@@ -2,7 +2,7 @@ REBOL [
     title: "CRUD Builder"
     date: 10-Dec-2013
     file: %crudbuilder.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A simple GUI application builder.  For each unique application, just copy this
         script to a new file name, edit the 'filename used to store record data (replace 

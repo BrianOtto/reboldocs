@@ -2,7 +2,7 @@ REBOL [
    title: "Always on Top"
     date: 23-Dec-2013
     file: %always-on-top.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Demonstrates how to use the Windows API to make a Rebol
         application always stay on top of other windows (so that the

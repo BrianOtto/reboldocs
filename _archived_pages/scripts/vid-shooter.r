@@ -2,7 +2,7 @@ REBOL [
     title: "VID Shooter"
     date: 6-Mar-2010
     file: %vid-shooter.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A simple shooter game to demonstrate timer events and offsets in VID.        
         Taken from the tutorial at http://re-bol.com

@@ -2,7 +2,7 @@ Rebol [
     title: "Remove Comments"
     date: 29-june-2008
     file: %remove-comments.r
-    author: Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A parse example that removes comments from Rebol code.  
         Taken from the tutorial at http://musiclessonz.com/rebol_tutorial.html

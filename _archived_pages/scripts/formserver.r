@@ -2,7 +2,7 @@ REBOL [
     title: "HTML Form Server"
     date: 30-Dec-2013
     file: %formserver.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Creates a web server which serves an HTML form, and then
         processes the data input by users.  This can be useful when tallying

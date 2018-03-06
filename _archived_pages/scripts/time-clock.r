@@ -2,7 +2,7 @@ REBOL [
     title: "Time Clock"
     date: 16-Jan-2011
     file: %time-clock.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Used to log hours worked by employees.  To help eliminate potential falsified
         hours, the program takes a photo of the employee each time they clock in

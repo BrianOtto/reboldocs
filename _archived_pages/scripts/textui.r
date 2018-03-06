@@ -2,7 +2,7 @@ REBOL [
     title: "TextUI - Textual User Interface"
     date: 22-1-2013
     file: %textui.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Open source REBOL is currently being ported to platforms without
         GUI support.  This script is a simple replacement for GUIs that collect

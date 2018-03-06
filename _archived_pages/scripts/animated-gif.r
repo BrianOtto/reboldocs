@@ -2,7 +2,7 @@ Rebol [
     title: "Animated GIF Example"
     date: 29-june-2008
     file: %animated-gif.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         An example of how to use the 'anim' function.  
         Taken from the tutorial at http://musiclessonz.com/rebol_tutorial.html

@@ -2,7 +2,7 @@ REBOL [
     title: "FizzBuzz"
     date: 18-Apr-2010
     file: %fizzbuzz.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A 92 character version of the classic "FizzBuzz" program. 
         Taken from the tutorial at http://re-bol.com

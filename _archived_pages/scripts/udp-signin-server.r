@@ -2,7 +2,7 @@ REBOL [
     Title: "UDP Signin Server"
     date: 3-Aug-2010
     file: %udp-signin-server.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Together with %udp-signin-client.r this program alerts users on a network
         that a new user has arrived and logged in.  Client users are only notified

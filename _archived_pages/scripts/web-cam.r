@@ -2,7 +2,7 @@ Rebol [
     title: "Web Cam"
     date: 29-june-2008
     file: %web-cam.r
-    author: Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         An example demonstrating how to use the Windows API to access local web cam
         images.  

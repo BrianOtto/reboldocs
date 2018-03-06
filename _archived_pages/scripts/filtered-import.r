@@ -16,7 +16,7 @@ REBOL [
         level: 'intermediate
         platform: 'all
         type: [dialect function]
-        domain: [cgi db dialects parse ui]
+        domain: [cgi database dialects parse ui]
         tested-under: [Core 2.6.2 WinXP OSX]
         support: none
         license: 'cc-by-sa

@@ -2,7 +2,7 @@ REBOL [
     title: "chmod777to555"
     date: 18-Apr-2010
     file: %chmod777to555.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         I use this script to make sure that there are no files chmod'd to 777
         on my webservers.  Built in is a routine that collects and writes the 

@@ -2,7 +2,7 @@ REBOL [
     title: "Catch Game"
     date: 30-Apr-2010
     file: %catch-game.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A tiny game to demonstrate the basics of VID.
         Taken from the tutorial at http://re-bol.com

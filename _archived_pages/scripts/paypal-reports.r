@@ -2,7 +2,7 @@ REBOL [
     title: "Paypal Reports"
     date: 22-1-2013
     file: %paypal-reports.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
 
         This is a beginner's example taken from the tutorial at:

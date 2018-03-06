@@ -2,7 +2,7 @@ REBOL [
     title: "No 'REBOL -' in title bar"
     date: 12-Mar-2010
     file: %no-rebol-in-title-bar.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Remove the deault "REBOL -" text from _all_ GUI title bars, including alerts
         and requestors.

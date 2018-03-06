@@ -2,7 +2,7 @@ REBOL [
     title: "Room Poll (HTML Survey Generator for LANs)"
     date: 30-Dec-2013
     file: %room-poll.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Demonstrates a useful app created from the formserver.r script. 
         This app generates an HTML form based on user specs (any number of

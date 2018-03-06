@@ -2,7 +2,7 @@ REBOL [
     title: "Remove Type"
     date: 10-Feb-2014
     file: %remove-type.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Removes all values of a given type from a list, or from nested lists any
         number of levels deep.

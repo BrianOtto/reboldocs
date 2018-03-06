@@ -2,7 +2,7 @@ REBOL [
     Title: "Intercom (Voice Communicator)"
     date: 7-nov-2009
     file: %intercom.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A walkie-talkie push-to-talk type of VOIP application.  Extremely simple -
         just records sound from mic to .wav file, then transfers the wave file to

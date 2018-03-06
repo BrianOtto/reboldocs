@@ -2,7 +2,7 @@ REBOL [
     title: "Guitar Chord and Scale Diagrammer"
     date: 12-Jan-2014
     file: %guitar-chord-and-scale-diagrammer.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A little example for the new tutorial at:
              http://re-bol.com/starting_computer_programming_with_rebol.html

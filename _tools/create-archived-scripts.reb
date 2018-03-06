@@ -28,6 +28,16 @@ foreach fileName read scriptDir [
             append jekyll join "title: ^"" [title "^""]
         ]
         
+        if find script/1 'author [
+            author: script/1/author
+            append jekyll join "author: ^"" [author "^""]
+        ]
+        
+        if find script/1 'date [
+            uploaded: script/1/date
+            append jekyll join "uploaded: ^"" [to-date uploaded "^""]
+        ]
+        
         if find script/1 'library [
             library: make object! script/1/library
             

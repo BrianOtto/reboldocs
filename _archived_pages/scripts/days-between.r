@@ -2,7 +2,7 @@ REBOL [
     title: "Days Between"
     date: 9-feb-2009
     file: %days-between.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Compute the number of days between any two dates - super simple GUI example.
         From the tutorial at http://musiclessonz.com/rebol.html

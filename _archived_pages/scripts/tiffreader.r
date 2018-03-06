@@ -4,7 +4,7 @@ REBOL [
     Date: 2-Mar-2010
     Title: "Rebol Tiff Reader"
     Version: 1.0
-    Author: "François Jouen."
+    Author: "François Jouen"
     Rights: 
     Purpose: {Some examples how to use tiff lib}
     library: [

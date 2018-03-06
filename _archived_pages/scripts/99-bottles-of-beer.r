@@ -2,7 +2,7 @@ REBOL [
     title: "99 Bottles of Beer"
     date: 7-Dec-2013
     file: %99-bottles-of-beer.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Prints the "99 Bottles of Beer" song lyrics, with proper grammar.
         "Bottles" changed to "bottle" at the end of the 2 line, and

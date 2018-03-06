@@ -2,7 +2,7 @@ REBOL [
     title: "Student Photo Database"
     date: 6-6-2010
     file: %student-photo-database.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         This example came from a question at: 
         http://synapse-ehr.com/forums/showthread.php?95-Connecting-to-an-Excel-spreadsheet

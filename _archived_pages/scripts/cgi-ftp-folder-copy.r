@@ -2,7 +2,7 @@ REBOL [
     title: "CGI FTP Folder Copy"
     date: 18-Apr-2010
     file: %cgi-ftp-folder-copy.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A CGI script to copy entire directories of files from one web server to another. 
         Taken from the tutorial at http://re-bol.com

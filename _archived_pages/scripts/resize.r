@@ -2,7 +2,7 @@ REBOL [
     title: "Relative Positioning In Resized VID Window"
     date: 18-Apr-2010
     file: %resize.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A simple example of how to position widgets relative to one another
         in a resized VID GUI window. 

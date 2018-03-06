@@ -2,7 +2,7 @@ REBOL [
     title: "Slidery"
     date: 21-Dec-2013
     file: %slidery.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         See the help-text below.
         An MS Windows .exe. is available at http://re-bol.com/slidery.exe

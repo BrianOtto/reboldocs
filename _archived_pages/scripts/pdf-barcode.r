@@ -2,7 +2,7 @@ REBOL [
     title: "PDF Bar Code Generator"
     date: 14-Mar-2010
     file: %pdf-barcode.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Takes a given string and XxY coordinate (in millimeters), and outputs
         a PDF file containing a printable bar code at the given position.  The bar

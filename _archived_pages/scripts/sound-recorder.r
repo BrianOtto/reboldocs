@@ -2,7 +2,7 @@
         title: "Sound Recorder"
         date: 4-nov-2009
         file: %sound-recorder.r
-        author:  Nick Antonaccio
+        author: "Nick Antonaccio"
         purpose: {
             Demonstrates how to record sounds using MCI.  Plays back the recorded
             sound using a native REBOL sound port.

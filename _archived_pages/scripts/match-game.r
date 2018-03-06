@@ -2,7 +2,7 @@ REBOL [
     title: "Memory Match Game"
     date: 12-oct-2015
     file: %match-game.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A configurable 'concentration' type matching game.
 

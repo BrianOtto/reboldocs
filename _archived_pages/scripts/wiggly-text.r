@@ -2,7 +2,7 @@ REBOL [
     title: "Wiggly Text"
     date: 13-mar-2014
     file: %wiggly-text.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A quick demo done with a student, loosely based on the
         QT "Wiggly" example.

@@ -2,7 +2,7 @@ REBOL [
     title: "WAP File Viewer CGI"
     date: 10-Aug-2010
     file: %wap-file-viewer.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Read text files on your web server using your WAP cell phone browser.
     }

@@ -2,7 +2,7 @@ REBOL [
     title: "GUI CRUD App Builder"
     date: 10-Dec-2013
     file: %gui-crud-app-builder.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         CRUD is an acronym for "Create Read Update and Delete". 
         Familiar types of apps such as contact managers, inventory systems,

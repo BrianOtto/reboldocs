@@ -2,7 +2,7 @@ REBOL [
     title: "Number Verbalizer"
     date: 13-Mar-2010
     file: %number-verbalizer.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Converts number values to their spoken English equivalent.
         (i.e., 23482194 = "Twenty Three million, Four Hundred Eighty

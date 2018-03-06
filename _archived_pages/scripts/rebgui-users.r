@@ -2,7 +2,7 @@ REBOL [
     title: "RebGUI User List Demo"
     date: 24-Apr-2010
     file: %rebgui-users.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A simple RebGUI demo.  Inspired by the tutorial at http://snappmx.com
         Taken from the tutorial at http://re-bol.com

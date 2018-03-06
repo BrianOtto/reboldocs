@@ -2,7 +2,7 @@ Rebol [
     title: "Directory Downloader"
     date: 29-june-2008
     file: %directory-downloader.r
-    author: Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Download all files and subfolders from a given folder on a web server.
         Used to transfer entire folder structures via network.  Currently configured

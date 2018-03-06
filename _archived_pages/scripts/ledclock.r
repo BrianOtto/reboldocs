@@ -3,7 +3,7 @@ REBOL [
   title: "Led Clock"
     Date: 11-Oct-2010
     Version: 1.0
-    Author: "François Jouen"
+    Author: "François Jouen"
 
     File: %ledclock.r
 

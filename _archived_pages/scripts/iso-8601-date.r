@@ -3,7 +3,7 @@ Rebol [
        level: 'beginner
        platform: 'all
        type: [one-liner function]
-       domain: [db text text-processing]
+       domain: [database text text-processing]
        tested-under: ["REBOL/View 1.2.1.3.1 21-Jun-2001" "REBOL/View 1.3.1.3.1 17-Jun-2005 Core 2.6.0"]
        support: none
        license: 'pd

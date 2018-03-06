@@ -2,7 +2,7 @@ Rebol [
     title: "Object Namespaces"
     date: 29-june-2008
     file: %object-namespaces.r
-    author: Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A short example to demonstrate how name spaces can be managed in Rebol, using objects.  
         Taken from the tutorial at http://musiclessonz.com/rebol_tutorial.html

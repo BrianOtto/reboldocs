@@ -2,7 +2,7 @@ REBOL [
     title: "REBOL/flash Build Tool"
     date: 8-Apr-2010
     file: %flash-build.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A simple script to help new users experiment with editing, compiling and viewing
         .swf files created with REBOL/flash.   It uses the built-in REBOL text editor to

@@ -2,7 +2,7 @@ REBOL [
     title: "Quick Script Compressor"
     date: 5-Jul-2011 
     file: %quick-script-compressor.r 
-    author: Nick Antonaccio 
+    author: "Nick Antonaccio" 
     purpose: {
         I like to distribute certain scripts in compressed format.  They're smaller
         when compressed, and the compressed syntax keeps casual peeping Toms

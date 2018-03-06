@@ -2,7 +2,7 @@ Rebol [
     title: "Object Game"
     date: 29-june-2008
     file: %objects-example.r
-    author: Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         A little game to demonstrate Rebol objects.  
         Taken from the tutorial at http://musiclessonz.com/rebol_tutorial.html

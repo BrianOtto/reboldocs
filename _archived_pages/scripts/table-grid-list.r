@@ -2,7 +2,7 @@ REBOL [
     title: "Resizeable Table/Grid/Multi-column List Widget Example"
     date: 13-Jul-2011 
     file: %table-grid-list.r
-    author: Nick Antonaccio 
+    author: "Nick Antonaccio" 
     purpose: {
         One of the greatest things about REBOL/View is the built in GUI dialect
             ("VID").  It's great for building simple GUI layouts quickly and

@@ -2,7 +2,7 @@ Rebol [
 	title: "Chord Accompaniment Player"
 	date: 29-june-2008
 	file: %chord-accompaniment-player.r  
-	author:  Nick Antonaccio
+	author: "Nick Antonaccio"
 	purpose:  {
 		Plays music backup tracks, based on chord progressions
 		entered as text.  

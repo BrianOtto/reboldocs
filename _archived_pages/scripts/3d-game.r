@@ -2,7 +2,7 @@ REBOL [
     title: "Little 3D Game"
     date: 29-Nov-2009
     file: %3d-game.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
         Try to click the bouncing REBOLs as many times as possible in 30 seconds.
         The speed increases with each click!  The 3D logic and calculations in this

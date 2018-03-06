@@ -2,7 +2,7 @@ REBOL [
     title: "Blogger"
     date: 22-Apr-2010
     file: %blogger.r
-    author:  Nick Antonaccio
+    author: "Nick Antonaccio"
     purpose: {
 
         This program allows users to create and add entries to an online blog page.
