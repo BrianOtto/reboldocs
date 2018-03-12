@@ -1,7 +1,8 @@
 ---
 section: "scripts"
-title: "Sorted By Domain"
-order: 2
+title: "All Scripts - Sorted By Domain"
+order: 0
+published: false
 ---
 
 {% assign allcaps = 'ai,cgi,ftp,gui,html,http,ldc,sdk,sql,tcp,ui,vid,xml' | split: ',' %}

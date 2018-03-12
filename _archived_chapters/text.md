@@ -1,8 +1,7 @@
 ---
 section: "scripts"
-chapter: "domain"
-title: "AI"
-order: 1
+title: "Text"
+order: 49
 ---
 
 {% assign pages = site.collections | where: "label" , "archived_pages" | first %}
@@ -16,12 +15,12 @@ order: 1
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<table class="table table-bordered bg-breadcrumb">
-<thead>
+<table class="table scripts">
+<thead class="thead-dark">
     <tr>
-        <td scope="col"><strong>Name</strong></td>
-        <td scope="col"><strong>Author</strong></td>
-        <td scope="col"><strong>Date</strong></td>
+        <th scope="col"><strong>Name</strong></th>
+        <th scope="col"><strong>Author</strong></th>
+        <th scope="col"><strong>Date</strong></th>
     </tr>
 </thead>
 <tbody>

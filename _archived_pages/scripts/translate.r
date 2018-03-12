@@ -1,6 +1,6 @@
 REBOL [
     Title: "translate"
-    Date: 23-Aug-2002/18:30:14+2:00
+    Date: 23-Aug-2002
     Version: 1.0.0
     File: %translate.r
     Author: "Volker Nitsch"

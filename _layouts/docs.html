@@ -92,7 +92,7 @@
                                 {% assign chapterName = chapterPath[1] | remove: ".md" %}
                                 
                                 <div class="accordionDocSub p-2 {% if chapter.url == page.url %}active{% endif %}" onclick="window.location.href = '{{ chapter.url }}'">
-                                    {% if page.url contains '/docs/archived/' %}{% if chapter.url == page.url or chapterName == page.chapter %}<img class="pr-2" src="/assets/img/archived-open.png" width="30" height="30">{% endif %}{% endif %}{{ chapter.title }}
+                                    {% if page.url contains '/docs/archived/' %}<img class="pr-2" src="/assets/img/archived-open.png" width="30" height="30">{% endif %}{{ chapter.title }}
                                 </div>
                                 
                                 {% if chapter.url == page.url or chapterName == page.chapter or page.script-url %}
