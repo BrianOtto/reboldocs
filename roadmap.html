@@ -1,61 +1,29 @@
 ---
 ---
+{% assign roadmap = site.collections | where: "label" , "roadmap" | first %}
+{% assign roadmapSorted = roadmap.docs | sort: "order" %}
+{% assign inverted = 0 %}
+
     <div class="container">
         <h1 class="display-4">Rebol Roadmap</h1>
         
         <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     
         <ul class="roadmap">
-            <li>
-                <div class="roadmap-badge bg-dark"><span class="oi oi-check icon-roadmap" title="" aria-hidden="true"></span></div>
-            
-                <div class="roadmap-panel">
-                    <h4 class="roadmap-title">Native Specs in C</h4>
-                    <p><small class="text-muted"><span class="oi oi-clock icon-roadmap-clock" title="" aria-hidden="true"></span><span class="pl-2 align-top">Completed in June, 2017</span></small></p>
-                
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipi elit, sed do eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim veniam, quis nostrud exercitation ullam.</p>
-                </div>
-            </li>
-            
-            <li class="roadmap-inverted">
-                <div class="roadmap-badge bg-dark"><span class="oi oi-check icon-roadmap" title="" aria-hidden="true"></span></div>
-            
-                <div class="roadmap-panel">
-                    <h4 class="roadmap-title">Extensions Rewrite</h4>
-                    <p><small class="text-muted"><span class="oi oi-clock icon-roadmap-clock" title="" aria-hidden="true"></span><span class="pl-2 align-top">Completed in October, 2017</span></small></p>
-                
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipi elit, sed do eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim veniam, quis nostrud exercitation ullam.</p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="roadmap-badge bg-dark"><span class="oi oi-pulse icon-roadmap-pulse" title="" aria-hidden="true"></span></div>
-            
-                <div class="roadmap-panel">
-                    <h4 class="roadmap-title">UTF-8 Everywhere</h4>
-                
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipi elit, sed do eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim veniam, quis nostrud exercitation ullam.</p>
-                </div>
-            </li>
-            
-            <li class="roadmap-inverted">
-                <div class="roadmap-badge bg-dark"><span class="oi oi-pulse icon-roadmap-pulse" title="" aria-hidden="true"></span></div>
-                
-                <div class="roadmap-panel">
-                    <h4 class="roadmap-title">libRebol</h4>
-                    
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipi elit, sed do eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim veniam, quis nostrud exercitation ullam.</p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="roadmap-badge bg-dark"><span class="oi oi-pulse icon-roadmap-pulse" title="" aria-hidden="true"></span></div>
-    
-                <div class="roadmap-panel">
-                    <h4 class="roadmap-title">Rebol on Android</h4>
-                    
-                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipi elit, sed do eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim veniam, quis nostrud exercitation ullam.</p>
-                </div>
-            </li>
+            {% for item in roadmapSorted %}
+            {% if item.hidden %} {% continue %} {% endif %}
+                <li class="{% if inverted == 1 %}roadmap-inverted{% assign inverted = 0 %}{% else %}{% assign inverted = 1 %}{% endif %}">
+                    <div class="roadmap-badge bg-dark"><span class="oi {% if item.completed %}oi-check icon-roadmap{% else %}oi-pulse icon-roadmap-pulse{% endif %}" title="" aria-hidden="true"></span></div>
+
+                    <div class="roadmap-panel">
+                        <h4 class="roadmap-title">{{ item.title }}</h4>
+                        {% if item.completed %}
+                        <p><small class="text-muted"><span class="oi oi-clock icon-roadmap-clock" title="" aria-hidden="true"></span><span class="pl-2 align-top">Completed in {{ item.completed }}</span></small></p>
+                        {% endif %}
+                        
+                        <p class="mb-0">{{ item }}</p>
+                    </div>
+                </li>
+            {% endfor %}
         </ul>
     </div>

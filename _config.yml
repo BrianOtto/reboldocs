@@ -33,6 +33,9 @@ collections:
   
   versions:
     output: false
+  
+  roadmap:
+    output: false
 
 defaults:
   -
@@ -64,3 +67,9 @@ defaults:
       type: "archived_pages"
     values:
       layout: "docs"
+  
+  -
+    scope:
+      type: "roadmap"
+    values:
+      layout: none
